@@ -1,0 +1,79 @@
+<div class="cancel" ng-controller="CancelController">
+	<div class="top">
+		<div>
+			<button has-permission="150404" class="btn btn-default btn-danger" ng-click="fetch()">领单</button>
+			<button has-permission="150405" class="btn btn-default btn-success" ng-click="refresh()">刷新</button>
+		</div>
+	</div>
+	<div class="mid">
+		<table class="table table-hover table-bordered">
+			<thead>
+			<tr>
+				<th>下单人</th>
+				<th>订单信息</th>
+				<th>投诉内容</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr ng-repeat="var in list">
+				<td>
+					<p>下单人：{{var.creator}}</p>
+					<p>
+						寄件{{var.fromCount}}次
+						&nbsp;&nbsp;|&nbsp;&nbsp;
+						收件{{var.toCount}}次
+					</p>
+					<p>上月订单量：{{var.lastMonthOrderCount}}</p>
+					<p>当前信誉分：{{var.creditScore}}</p>
+					<span class="label label-primary">Lv{{var.level}}</span>
+					<span ng-switch on="var.discountRate">
+						<span ng-switch-when="100"></span>
+						<span ng-switch-default>
+							<span class="label label-primary">{{var.discountRate}}折</span>
+						</span>
+					</span>
+				</td>
+				<td>
+					<p>{{var.orderNumber}}</p>
+					<p>{{var.ctime}}</p>
+					<span class="label label-primary" ng-if="var.city">{{var.city}}</span>
+					<span class="label label-primary" ng-switch on="var.complainType">
+                        <span ng-switch-when="0">
+                            取消单投诉
+                        </span>
+                        <span ng-switch-when="1">
+                            差评订单
+                        </span>
+					</span>
+				</td>
+				<td>
+					<p>评价时间：{{var.complaintTime}}</p>
+					<p ng-if="var.star">评价星级：{{var.star}}</p>
+					评价内容：{{var.content}}
+					<p><span class="label label-primary" ng-repeat="tag in var.tags">{{tag}}</span>&nbsp;&nbsp;</p>
+				</td>
+				<td>
+					<p ng-switch on="var.isHandle">
+                        <span ng-switch-when="0">
+                            未处理
+                        </span>
+                        <span ng-switch-when="1">
+                            已处理
+                        </span>
+					</p>
+				</td>
+				<td>
+					<div class="map">
+					<button has-permission="150401" class="btn btn-default btn-success" ng-click="orderDetail(var.orderNumber)">查看</button>
+					<button has-permission="150500" class="btn btn-default btn-success" ng-click="orderRemark(var.orderNumber)">备注</button>
+					<button has-permission="150501" class="btn btn-default btn-danger" ng-click="punishment(var.orderNumber)">处罚</button>
+					</div>
+				</td>
+			</tr>
+ 			</tbody>
+		</table>
+	</div>
+</div>

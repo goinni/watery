@@ -1,0 +1,65 @@
+<div class="modal-header">
+    <h3 class="modal-title">闪送员并单</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+            <div class="form-group">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                        <tr>
+                            <td>订单号：</td>
+                            <td colspan="3">{{modalData.orderInfo.orderNumber}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>寄件人：</b></td>
+                            <td>{{modalData.customerInfo.senderInfo.fromUser}}</td>
+                            <td>手机：</td>
+                            <td>{{modalData.customerInfo.senderInfo.fromMobile}}</td>
+                        </tr>
+                        <tr>
+                            <td>寄件地址：</td>
+                            <td colspan="3">{{modalData.customerInfo.senderInfo.fromAddr}}{{modalData.customerInfo.senderInfo.fromAddrDetail}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>收件人：</b></td>
+                            <td>{{modalData.customerInfo.recipients[0].toName}}</td>
+                            <td>手机：</td>
+                            <td>{{modalData.customerInfo.recipients[0].toMobile}}</td>
+                        </tr>
+                        <tr>
+                            <td>收件地址：</td>
+                            <td colspan="3">{{modalData.customerInfo.recipients[0].toAddress}}{{modalData.customerInfo.recipients[0].toAddressDetail}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">查看闪送员订单：</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" ng-model="paramData.courierMobile" placeholder="请输入闪送员手机号">
+                </div>
+                <button type="button" ng-click="getCourierOrderInfo()" class="btn btn-primary col-sm-2">搜索</button>
+            </div>
+            <div class="form-group" ng-if="courierOrderInfo">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                        <tr>
+                            <th>订单号</th>
+                            <th>寄件信息</th>
+                            <th>收件信息</th>
+                        </tr>
+                        <tr ng-repeat="item in courierOrderInfo">
+                            <td>{{item.orderNumber}}</td>
+                            <td>{{item.fromName}} <br/> {{item.fromMobile}} <br/> {{item.fromAddress}}</td>
+                            <td>{{item.toNames[0]}} <br/> {{item.toMobiles[0]}} <br/> {{item.toAddress[0]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+       
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">并单给他</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

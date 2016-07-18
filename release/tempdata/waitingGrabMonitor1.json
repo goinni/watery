@@ -1,0 +1,145 @@
+{
+  "data": {
+    "et": "2016-9-9 23:59:59",
+    "res": {
+      "data": [
+        {
+          "callAmountPerFailOrder": "0.0",
+          "callAmountPerSuccessOrder": "0.0",
+          "callAmountPerTotalOrder": "3.0",
+          "date": "2015-12-16 00:00:00",
+          "dialout": 3,
+          "fail": 0,
+          "failAssignRatio": "0.0",
+          "id": 595,
+          "success": 0,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 0
+        },
+        {
+          "callAmountPerFailOrder": "3.083",
+          "callAmountPerSuccessOrder": "1.333",
+          "callAmountPerTotalOrder": "4.534",
+          "date": "2015-12-17 00:00:00",
+          "dialout": 934,
+          "fail": 12,
+          "failAssignRatio": "0.002",
+          "id": 596,
+          "success": 6,
+          "successAssignRatio": "0.001",
+          "waitingGrab": 4893
+        },
+        {
+          "callAmountPerFailOrder": "3.083",
+          "callAmountPerSuccessOrder": "1.333",
+          "callAmountPerTotalOrder": "4.534",
+          "date": "2015-12-17 00:00:00",
+          "dialout": 934,
+          "fail": 12,
+          "failAssignRatio": "0.002",
+          "id": 602,
+          "success": 6,
+          "successAssignRatio": "0.001",
+          "waitingGrab": 4893
+        },
+        {
+          "callAmountPerFailOrder": "2.897",
+          "callAmountPerSuccessOrder": "2.292",
+          "callAmountPerTotalOrder": "2.487",
+          "date": "2015-12-18 00:00:00",
+          "dialout": 796,
+          "fail": 78,
+          "failAssignRatio": "0.01",
+          "id": 597,
+          "success": 24,
+          "successAssignRatio": "0.003",
+          "waitingGrab": 8059
+        },
+        {
+          "callAmountPerFailOrder": "1.5",
+          "callAmountPerSuccessOrder": "0.0",
+          "callAmountPerTotalOrder": "1.337",
+          "date": "2015-12-19 00:00:00",
+          "dialout": 119,
+          "fail": 2,
+          "failAssignRatio": "0.0",
+          "id": 598,
+          "success": 1,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 5082
+        },
+        {
+          "callAmountPerFailOrder": "1.273",
+          "callAmountPerSuccessOrder": "0.5",
+          "callAmountPerTotalOrder": "1.455",
+          "date": "2015-12-20 00:00:00",
+          "dialout": 256,
+          "fail": 11,
+          "failAssignRatio": "0.002",
+          "id": 599,
+          "success": 2,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 5754
+        },
+        {
+          "callAmountPerFailOrder": "3.227",
+          "callAmountPerSuccessOrder": "1.75",
+          "callAmountPerTotalOrder": "2.197",
+          "date": "2015-12-21 00:00:00",
+          "dialout": 167,
+          "fail": 22,
+          "failAssignRatio": "0.009",
+          "id": 600,
+          "success": 4,
+          "successAssignRatio": "0.002",
+          "waitingGrab": 2491
+        },
+        {
+          "callAmountPerFailOrder": "0.0",
+          "callAmountPerSuccessOrder": "0.0",
+          "callAmountPerTotalOrder": "0.0",
+          "date": "2015-12-22 00:00:00",
+          "dialout": 0,
+          "fail": 1,
+          "failAssignRatio": "0.111",
+          "id": 601,
+          "success": 0,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 9
+        },
+        {
+          "callAmountPerFailOrder": "0.0",
+          "callAmountPerSuccessOrder": "0.0",
+          "callAmountPerTotalOrder": "0.0",
+          "date": "2015-12-22 00:00:00",
+          "dialout": 0,
+          "fail": 1,
+          "failAssignRatio": "0.111",
+          "id": 603,
+          "success": 0,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 9
+        },
+        {
+          "callAmountPerFailOrder": "0.0",
+          "callAmountPerSuccessOrder": "0.0",
+          "callAmountPerTotalOrder": "0.0",
+          "date": "2016-01-10 00:00:00",
+          "dialout": 0,
+          "fail": 0,
+          "failAssignRatio": "0.0",
+          "id": 604,
+          "success": 0,
+          "successAssignRatio": "0.0",
+          "waitingGrab": 0
+        }
+      ],
+      "err": null,
+      "status": 200,
+      "success": true
+    },
+    "st": "2015-1-1 00:00:00",
+    "type": 1
+  },
+  "status": 200
+}

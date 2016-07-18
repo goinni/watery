@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title">订单流单</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">订单号码：</label>
+        <div class="col-sm-7">
+          <p class="form-control-static">{{modalData.orderInfo.orderNumber}}</p>
+        </div>
+      </div>
+      
+      <div class="form-group container-fluid">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" ng-model="xtype" value="1"> 因客户
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" ng-model="xtype" value="2"> 因服务
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" ng-model="xtype" value="3"> 因闪送员
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" ng-model="xtype" value="99"> 因其他
+            </label>
+      </div>
+      <div class="form-group container-fluid">
+        <textarea class="form-control" ng-model="remark" rows="3" placeholder="流单将撤销客户之前发的订单，您确定要流单么？如果确定，请填写流单原因"></textarea>
+      </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">确定流单</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

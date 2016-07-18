@@ -1,0 +1,158 @@
+{
+  "data": {
+    "ticketCourierInfo": {
+      "blackCount": 0,
+      "cash": 2880,
+      "city": "北京市",
+      "courierWorkCount": 1,
+      "ctime": "2016-01-15 19:43:41",
+      "name": "孙宇强",
+      "number": "SSBJ000000020",
+      "punishCount": 0,
+      "rewardsCount": 0,
+      "status": 0
+    },
+    "ticketList": [
+      {
+        "createTime": "2016-01-19 11:31:53",
+        "id": 196251,
+        "nickName": null,
+        "number": "20160119113153630",
+        "orderId": null,
+        "orderNumber": "TDH2016011510000087",
+        "orderStatus": null,
+        "qaQroupName1": "如何下单如何收费",
+        "qaQroupName2": "支付方式",
+        "qaQroupName3": null,
+        "remark": "1234234",
+        "status": "待处理"
+      },
+      {
+        "createTime": "2016-01-19 11:26:41",
+        "id": 196250,
+        "nickName": null,
+        "number": "20160119112641554",
+        "orderId": null,
+        "orderNumber": null,
+        "orderStatus": null,
+        "qaQroupName1": "投诉闪送员问题 ",
+        "qaQroupName2": "抢单后未及时联系寄件或收件人",
+        "qaQroupName3": null,
+        "remark": "asdfasdfdasf",
+        "status": "待处理"
+      },
+      {
+        "createTime": "2016-01-19 11:26:23",
+        "id": 196249,
+        "nickName": null,
+        "number": "20160119112623376",
+        "orderId": null,
+        "orderNumber": null,
+        "orderStatus": null,
+        "qaQroupName1": "顾客账户的款项问题",
+        "qaQroupName2": "晒单没有优惠券",
+        "qaQroupName3": null,
+        "remark": "1234",
+        "status": "结案"
+      },
+      {
+        "createTime": "2016-01-19 11:14:02",
+        "id": 196248,
+        "nickName": null,
+        "number": "20160119111402725",
+        "orderId": null,
+        "orderNumber": null,
+        "orderStatus": null,
+        "qaQroupName1": "顾客账户的款项问题",
+        "qaQroupName2": "首单没有享受优惠",
+        "qaQroupName3": null,
+        "remark": "134",
+        "status": "结案"
+      },
+      {
+        "createTime": "2016-01-18 13:31:47",
+        "id": 196247,
+        "nickName": null,
+        "number": "20160118133147983",
+        "orderId": null,
+        "orderNumber": "TDH2016011510000087",
+        "orderStatus": null,
+        "qaQroupName1": "如何下单如何收费",
+        "qaQroupName2": "在哪下单",
+        "qaQroupName3": null,
+        "remark": "新建工单1234",
+        "status": "待处理"
+      }
+    ],
+    "ticketOrderInfoList": [
+      {
+        "ctime": "2016-01-15 19:46:52",
+        "fromName": "爱德华",
+        "orderNumber": "TDH2016011510000087",
+        "paymentInfo": {
+          "agent": "余额支付",
+          "balance": 35,
+          "coupon": 0,
+          "discount": 1,
+          "total": 36,
+          "type": "在线支付"
+        },
+        "status": 60,
+        "statusName": null,
+        "ticketCount": 4,
+        "toName": [
+          "爱立信"
+        ]
+      },
+      {
+        "ctime": "2016-01-15 19:46:52",
+        "fromName": "爱德华",
+        "orderNumber": "TDH2016011510000087",
+        "paymentInfo": {
+          "agent": "余额支付",
+          "balance": 35,
+          "coupon": 0,
+          "discount": 1,
+          "total": 36,
+          "type": "在线支付"
+        },
+        "status": 60,
+        "statusName": null,
+        "ticketCount": null,
+        "toName": [
+          "爱立信"
+        ]
+      },
+      {
+        "ctime": "2016-01-15 19:46:52",
+        "fromName": "爱德华",
+        "orderNumber": "TDH2016011510000087",
+        "paymentInfo": {
+          "agent": "余额支付",
+          "balance": 35,
+          "coupon": 0,
+          "discount": 1,
+          "total": 36,
+          "type": "在线支付"
+        },
+        "status": 60,
+        "statusName": null,
+        "ticketCount": null,
+        "toName": [
+          "爱立信"
+        ]
+      }
+    ],
+    "ticketUserInfo": {
+      "cash": null,
+      "city": null,
+      "fromCount": 1,
+      "name": null,
+      "subType": 1,
+      "toCount": 1,
+      "type": 1
+    },
+    "userType": 2
+  },
+  "status": 200
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "order": {
+      "bindingUserVo": null,
+      "courierMobile": "15501213579",
+      "fetchDate": null,
+      "fetchLat": 0,
+      "fetchLng": 0,
+      "fromAddr": "北京玫瑰园-东南门",
+      "fromLat": 40.17,
+      "fromLng": 116.27,
+      "grabDate": null,
+      "grabLat": 0,
+      "grabLng": 0,
+      "orderNumber": "TDH2016011510000040",
+      "orderStatus": 60,
+      "readyDate": null,
+      "readyLat": 0,
+      "readyLng": 0,
+      "toAddr": "金隅嘉华大厦D座",
+      "toAddrList": [
+        {
+          "status": 1,
+          "toAddr": "金隅嘉华大厦D座",
+          "toLat": 40.04,
+          "toLng": 116.31
+        }
+      ],
+      "toLat": 40.04,
+      "toLng": 116.31
+    },
+    "title": "轨迹【TDH2016011510000040】"
+  },
+  "status": 200
+}

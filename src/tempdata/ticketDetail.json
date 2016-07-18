@@ -1,0 +1,56 @@
+{
+  "data": {
+    "serviceType": null,
+    "ticketCourierInfo": {
+      "blackCount": 0,
+      "cash": 2880,
+      "city": "北京市",
+      "courierWorkCount": 1,
+      "ctime": "2016-01-15 19:43:41",
+      "name": "孙宇强",
+      "number": "SSBJ000000020",
+      "punishCount": 0,
+      "rewardsCount": 0,
+      "status": 0
+    },
+    "ticketDataVo": {
+      "createTime": "2016-01-19 11:31:53",
+      "id": 196251,
+      "list": [
+        {
+          "createTime": "2016-01-19 11:31:53",
+          "operatorId": "103449",
+          "operatorName": null,
+          "remark": "1234234",
+          "statusName": "待处理",
+          "ticketId": 196251
+        }
+      ],
+      "memberId": null,
+      "memberType": 1,
+      "mobile": "15624962676",
+      "number": "20160119113153630",
+      "operatorId": "103449",
+      "orderId": null,
+      "orderNumber": "TDH2016011510000087",
+      "qaQroupId1": 1,
+      "qaQroupId2": 15,
+      "qaQroupId3": null,
+      "remark": "1234234",
+      "status": 1,
+      "updateTime": "2016-01-19 11:31:53",
+      "userType": 0
+    },
+    "ticketUserInfo": {
+      "cash": null,
+      "city": null,
+      "fromCount": 1,
+      "name": null,
+      "subType": 1,
+      "toCount": 1,
+      "type": 1
+    },
+    "uuid": 196251
+  },
+  "status": 200
+}

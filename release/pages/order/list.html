@@ -1,0 +1,90 @@
+<div ng-controller="OrderListController">
+<div class="work-mark">
+    <button ng-repeat="mark in data.marks" ng-click="data.queryOrderByMark(mark, $index)" ng-class="{true:'btn alert-success',undefined:'btn alert-info'}[isActive[$index]]" type="button">
+       {{mark.name}}<span class="badge">{{mark.count}}</span>
+    </button>
+</div>
+<table class="table table-hover order-list-table-part">
+      <thead>
+        <tr class="btn-primary">
+          <th>#</th>
+          <th>订单信息</th>
+          <th width="15%">寄件信息</th>
+          <th width="25%">收件信息</th>
+          <th>支付信息</th>
+          <th width="15%">闪送员信息</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody class="order-list-body" ng-if="data.items.length">
+        <tr ng-repeat="item in data.items">
+          <th scope="row">{{$index + 1}}</th>
+          <td>
+              <p>
+                  <b>{{item.orderInfo.orderNumber}}</b>
+              </p>
+              <p><span class="glyphicon glyphicon-user"></span>下单人:{{item.orderInfo.creator}}</p>
+              <p>{{item.orderInfo.city}}</p>
+              <p>{{item.orderInfo.ctime}}</p>
+              <p ng-if="item.orderInfo.premium!=0" class="text-danger">溢价费: {{item.orderInfo.premium}}元</p>
+              <p ng-if="item.orderInfo.addition!=0" class="text-danger">加价费: {{item.orderInfo.addition}}元</p>
+              <p>
+                  <span ng-repeat="mark in item.orderInfo.marks" class="label label-primary">{{mark}}</span>
+              </p>
+          </td>
+          <td>
+              <p><span class="glyphicon glyphicon-user"></span>{{item.senderInfo.name}}:{{item.senderInfo.fromMobile}}</p>
+              <p>{{item.senderInfo.fromAddr}}</p>
+              <p>
+                  <span ng-repeat="mark in item.senderInfo.marks" class="label label-primary">{{mark}}</span>
+              </p>
+          </td>
+          <td>
+            <uib-accordion close-others="true">
+                <uib-accordion-group is-open='recipientsInfo.firstOpen' ng-repeat="recipientsInfo in item.recipientsInfo" heading="{{recipientsInfo.toName}}:{{recipientsInfo.toMobile}}">
+                  <p><span class="glyphicon glyphicon-user"></span>{{recipientsInfo.toName}}:{{recipientsInfo.toMobile}}</p>
+                  <p>{{recipientsInfo.toAddr}}</p>
+                  <p class="recipient-marks-area">
+                      <span ng-repeat="mark in recipientsInfo.marks" class="label label-primary">{{mark}}</span>
+                  </p>
+                </uib-accordion-group>
+            </uib-accordion>
+          </td>
+          <td>
+            <p>支付方式：{{item.paymentInfo.type}}</p>
+            <p>支付渠道：{{item.paymentInfo.agent}}</p>
+            <p>总计：{{item.paymentInfo.total}}元</p>
+            <p>余额：{{item.paymentInfo.balance}}元</p>
+            <p>优惠：{{item.paymentInfo.discount}}元</p>
+          </td>
+          <td>
+            <b ng-if="!item.courierInfo.number">无闪送员信息</b>
+            <div ng-if="item.courierInfo.number">
+                <p has-permission="151300" class="show-courier-info-btn" ng-click="data.lookCourierInfo(item.courierInfo)"><span class="glyphicon glyphicon-user"></span><b>{{item.courierInfo.name}}</b></p>
+                <p>姓名：{{item.courierInfo.name}}</p>
+                <p>电话： {{item.courierInfo.mobile}}</p>
+                <p>闪送编号: {{item.courierInfo.number}}</p>
+                <p>
+                    <span ng-repeat="mark in item.courierInfo.marks" class="label label-primary">{{mark}}</span>
+                </p>
+            </div>
+          </td>
+          <td>
+            <p>{{item.orderStatus}}</p>
+          </td>
+          <td>
+            <p>
+              <a has-permission="150401" class="btn btn-primary" ng-click="data.lookOrderDetail(item)" href="javascript:void(0)">查看</a>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+    <p ng-if="!data.items.length" class="bg-warning">
+        暂无搜索结果
+    </p>
+    <uib-pagination previous-text="上一页" next-text="下一页" items-per-page="data.paging.row" total-items="data.paging.totalItems" max-size="data.paging.maxSize" ng-model="data.paging.currentPage" ng-change="data.paging.changed()"></uib-pagination>
+</div>
+

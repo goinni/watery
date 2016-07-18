@@ -1,0 +1,163 @@
+{
+   "status": 200 ,
+   "err": "coustomer info data is ok!",
+   "data": {
+        "customerInfo":{
+            "createrInfo": {
+                "createdMobile":"12552272235",
+                "userLevel":"Lv1 享受1折",
+                "creditScores": "4.0",
+                "pastOneMouthCount": "325",
+                "totalDay": "283",
+                "createSendCount": "27",
+                "createRecvCount": "20"
+            },"senderInfo":{
+                "fromUser": "王宝强",
+                "fromMobile": "17510239828",
+                "fromSendCount": "12",
+                "fromRecvCount": "5",
+                "fromAddr": "北京市海淀区",
+                "fromAddrDetail":"五道口东升员公寓12栋2003室",
+                "pickupPassword": "588231"
+            },"recipients":[{
+                "infoId": "1001",
+                "toName": "刘德华",
+                "toMobile": "1871008226",
+                "sendCount": "13",
+                "recvCount": "2",
+                "statusName": "已抢单",
+                "toAddress": "海淀区中关软件园首创空间",
+                "toAddressDetail":"",
+                "deliveryPassword": "882888"
+            },{
+                "infoId": "1002",
+                "toName": "刘德华2",
+                "toMobile": "1971008226",
+                "sendCount": "13",
+                "recvCount": "2",
+                "statusName": "已抢单",
+                "toAddress": "海淀区中关软件园首创空间",
+                "toAddressDetail":"",
+                "deliveryPassword": "882888"
+            },{
+                "infoId": "1003",
+                "toName": "刘德华3",
+                "toMobile": "1371008226",
+                "sendCount": "13",
+                "recvCount": "2",
+                "statusName": "已抢单",
+                "toAddress": "海淀区中关软件园首创空间",
+                "toAddressDetail":"",
+                "deliveryPassword": "882888"
+            }]
+        },
+        "courierInfo":{
+            "courierName":"刘诗诗",
+            "courierMobile": "18510239278",
+            "courierNumber":"SSBJ00003007",
+            "courierFinishCount":"1180",
+            "travelWay":"摩托车",
+            "grabDistance":"1"
+        },
+        "timeInfo":{
+            "appointmentDeliveryTime":[
+                "2016-01-07 17:07:13",
+                "2016-01-08 17:07:13",
+                "2016-01-09 17:07:13"
+            ],
+            "appointmentTime":"2016-01-07 17:07:13",
+            "createTime":"2016-01-07 17:07:13",
+            "grabTime":"2016-01-07 17:07:13",
+            "inPlaceTime":"2016-01-07 17:07:13",
+            "pickupTime":"2016-01-07 17:07:13",
+            "deliveryTime":[
+                "2016-01-07 17:07:13",
+                "2016-01-08 17:07:13",
+                "2016-01-09 17:07:13"
+            ],
+            "shouTime":[
+                "40",
+                "50",
+                "60"
+            ],
+            "timeConsume":"120",
+            "inPlaceConsume":"32",
+            "pickupConsume":"38"
+        },
+        "orderInfo":{
+            "status":"44",
+            "orderId":"1001",
+            "orderNumber":"DH101020160723",
+            "city":"北京市",
+            "price":"16.00",
+            "distance":"1300",
+            "traffic":"不指定",
+            "weight":"1",
+            "channel":"APP端",
+            "goodsName":"食品",
+            "remark":"尽快送达",
+            "score":"12",
+            "scoreSwitch":"1",
+            "priceInfo": {
+                "actualPayment": {
+                    "price": "26",
+                    "remark": ""
+                },
+                "addition": {
+                    "price": "0"
+                },
+                "continuedWeight": {
+                    "price": 4
+                },
+                "crossRiver": {
+                    "price": null,
+                    "remark": ""
+                },
+                "discountAmount": {
+                    "price": "95",
+                    "remark": ""
+                },
+                "mileageAmount": {
+                    "price": "26",
+                    "remark": ""
+                },
+                "nightFee": {
+                    "price": "0",
+                    "remark": ""
+                },
+                "preferentialAmount": {
+                    "price": "1",
+                    "remark": null
+                },
+                "premium": {
+                    "price": "0",
+                    "remark": ""
+                },
+                "travelWayFee": {
+                    "price": "0",
+                    "remark": ""
+                },
+                "upDoorFee": {
+                    "price": "0",
+                    "remark": ""
+                }
+            }
+        },
+        "handlerInfos":[{
+            "ctime":"2015-01-28 18:30:28",
+            "operator":"李易锋",
+            "remark":"闪送员完成收件",
+            "type":"补贴"
+        },{
+            "ctime":"2015-01-28 18:30:28",
+            "operator":"李易锋2",
+            "remark":"闪送员完成收件",
+            "type":"系统推单"
+        },{
+            "ctime":"2015-01-28 18:30:28",
+            "operator":"李易锋3",
+            "remark":"闪送员完成收件",
+            "type":"补贴"
+        }]
+   }
+}

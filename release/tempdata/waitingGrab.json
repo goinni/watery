@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "courierCount": 0,
+      "ctime": "2016-01-14 17:04:28",
+      "deliveryAppointTime": null,
+      "distance": 10100,
+      "fromAddress": "昌平玫瑰园",
+      "goods": "11",
+      "orderNumber": "TDH2016011410000084",
+      "pickupAppointTime": 0,
+      "remark": null,
+      "toAddress": [
+        "回龙观骊龙园"
+      ],
+      "total": 46,
+      "travelWay": "未指定",
+      "weight": 1
+    },
+    {
+      "courierCount": 0,
+      "ctime": "2016-01-14 16:38:10",
+      "deliveryAppointTime": null,
+      "distance": 6700,
+      "fromAddress": "宁波万豪酒店（宁波市海曙区和义路188号(和义路与解放北路交汇处)）",
+      "goods": "宁波",
+      "orderNumber": "TDH2016011410000080",
+      "pickupAppointTime": 0,
+      "remark": null,
+      "toAddress": [
+        "宁波文化广场（宁波市江东区中山东路）"
+      ],
+      "total": 29,
+      "travelWay": "未指定",
+      "weight": 1
+    },
+    {
+      "courierCount": 0,
+      "ctime": "2016-01-14 16:40:41",
+      "deliveryAppointTime": null,
+      "distance": 18100,
+      "fromAddress": "昌平西关环岛（北京市昌平区西关路21号）",
+      "goods": "薯片005",
+      "orderNumber": "TDH2016011410000083",
+      "pickupAppointTime": 0,
+      "remark": null,
+      "toAddress": [
+        "骊龙园1号楼（北京市昌平区育知路）"
+      ],
+      "total": 56,
+      "travelWay": "未指定",
+      "weight": 1
+    }
+  ],
+  "status": 200
+}

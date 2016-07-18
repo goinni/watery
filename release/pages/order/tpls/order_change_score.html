@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h3 class="modal-title">积分确认</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+        <p class="form-group">
+            <label class="col-sm-3 control-label">
+                取件预约
+                <input type="checkbox" value="A" ng-model="scoreAdjustReason.A">
+            </label>
+            <label class="col-sm-3 control-label">
+                送件预约
+                <input type="checkbox" value="B" ng-model="scoreAdjustReason.B">
+            </label>
+
+        </p>
+        <p class="form-group">
+            <label class="col-sm-3 control-label">
+                取件等待
+                <input type="checkbox" value="C" ng-model="scoreAdjustReason.C">
+            </label>
+            <label class="col-sm-3 control-label">
+                送件等待
+                <input type="checkbox" value="D" ng-model="scoreAdjustReason.D">
+            </label>
+            <label class="col-sm-3 control-label">
+                其它
+                <input type="checkbox" value="E" ng-model="scoreAdjustReason.E">
+            </label>
+        </p>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">确认</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

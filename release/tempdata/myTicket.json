@@ -1,0 +1,24 @@
+{
+  "data": {
+    "count1": 0,
+    "count2": 0,
+    "count3": 1,
+    "list": [
+      {
+        "createTime": "2016-01-19 11:14:02",
+        "id": 196248,
+        "nickName": null,
+        "number": "20160119111402725",
+        "orderId": null,
+        "orderNumber": null,
+        "orderStatus": null,
+        "qaQroupName1": "顾客账户的款项问题",
+        "qaQroupName2": "首单没有享受优惠",
+        "qaQroupName3": null,
+        "remark": "134",
+        "status": "结案"
+      }
+    ]
+  },
+  "status": 200
+}

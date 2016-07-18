@@ -1,0 +1,71 @@
+<div ng-controller="WorkorderListController">
+    <div has-permission="150309" class="work-mark">
+        <button ng-repeat="mark in data.marks" ng-click="data.queryOrderByMark(mark,$index)" ng-class="{true:'btn alert-success',undefined:'btn alert-info'}[isActive[$index]]" type="button">
+           {{mark.name}}<span class="badge">{{mark.count}}</span>
+        </button>
+    </div>
+    <table class="table table-hover order-list-body">
+          <thead>
+            <tr class="btn-primary">
+              <th>#</th>
+              <th>创建时间</th>
+              <th>工单号</th>
+              <th>一级</th>
+              <th>二级</th>
+              <th>三级</th>
+              <th>处理人</th>
+              <th>订单状态</th>
+              <th>订单操作</th>
+              <th>工单状态</th>
+              <th>工单操作</th>
+            </tr>
+          </thead>
+          <tbody ng-if="data.items.length">
+            <tr ng-repeat="item in data.items">
+              <th scope=x"row">
+                {{$index + 1}}
+              </th>
+              <td>
+                  <p>{{item.createTime}}</p>
+              </td>
+              <td>
+                  <p>{{item.number}}</p>
+              </td>
+              <td>
+                <p>{{item.qaQroupName1 || '无'}}</p>
+              </td>
+              <td>
+                <p> {{item.qaQroupName2 || '无'}}</p>
+              </td>
+              <td>
+                <p>{{item.qaQroupName3 || '无'}}</p>
+              </td>
+              <td>
+                <p>{{item.nickName || '无'}}</p>
+              </td>
+              <td>
+                <p>{{item.orderStatus || '无'}}</p>
+              </td>
+              <td>
+                <p>
+                  <font ng-if="!item.orderNumber">无</font>
+                  <a has-permission="150401" ng-if="item.orderNumber" class="btn btn-primary btn-xs" ng-click="data.orderDetail(item.orderNumber)" href="javascript:void(0)">查看订单</a>
+                </p>
+              </td>
+              <td>
+                <p>{{item.status}}</p>
+              </td>
+              <td>
+                <p>
+                  <a has-permission="150312" class="btn btn-success btn-xs" ng-click="data.catchOrder(item)" ng-if="hasCatchOrder" href="javascript:void(0)">领单</a>
+                  <a has-permission="150300" class="btn btn-primary btn-xs" ng-click="data.lookOrderDetail(item)" href="javascript:void(0)">查看</a>
+                </p>
+              </td>
+            </tr>
+      </tbody>
+    </table>
+    <p ng-if="!data.items.length" class="bg-warning">
+        暂无搜索结果
+    </p>
+   <uib-pagination previous-text="上一页" next-text="下一页" total-items="data.paging.totalItems" max-size="data.paging.maxSize" ng-model="data.paging.currentPage" ng-change="data.paging.changed()"></uib-pagination>
+</div>

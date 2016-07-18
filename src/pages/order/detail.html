@@ -1,0 +1,263 @@
+<div class="order-detail-panel" ng-controller="OrderDetailController">
+    <div class="panel panel-primary">
+      <div class="panel-heading coustom-info-heading">
+        <h3 class="panel-title ">顾客信息</h3>
+        <p>
+          <span ng-if="orderInfo.orderInfo.status>=44">&nbsp;</span>
+          <span ng-if="orderInfo.orderInfo.status<44" has-permission="150106" class="btn btn-default btn-xs" ng-click="takeAppointment(data.orderEntity)">预约</span>
+          <span ng-if="orderInfo.orderInfo.status<44" has-permission="150107" class="btn btn-default btn-xs" ng-click="senderMobileModify(data.orderEntity, 0)">变更</span>
+          <span ng-if="orderInfo.orderInfo.status<44" has-permission="150104" class="btn btn-default btn-xs" ng-click="pickup(data.orderEntity)">取件</span>       
+        </p>
+        <p ng-repeat="item in orderInfo.customerInfo.recipients">
+          <span ng-if="orderInfo.orderInfo.status != 60" has-permission="150106" class="btn btn-default btn-xs" ng-click="takeAppointment(item)">预约</span>
+          <span ng-if="orderInfo.orderInfo.status != 60" has-permission="150107" class="btn btn-default btn-xs" ng-click="senderMobileModify(item, 1)">变更</span>
+          <span ng-if="orderInfo.orderInfo.status != 60" has-permission="150105" class="btn btn-default btn-xs" ng-click="delivery(item)">收件</span>      
+        </p>
+      </div>
+      <div class="panel-body">
+        <ul class="coustom-info-part">
+            <li>
+                <p>下单人：<call click="userPorfile" number="orderInfo.customerInfo.createrInfo.createdMobile"></call>
+                </p>
+                <p>用户等级：{{orderInfo.customerInfo.createrInfo.userLevel}}</p>
+                <p>当前信誉分：{{orderInfo.customerInfo.createrInfo.creditScores}}分</p>
+                <p class="clear"></p>
+                <p>上月订单量：{{orderInfo.customerInfo.createrInfo.pastOneMouthCount}} 单</p>
+                <p>累计使用：{{orderInfo.customerInfo.createrInfo.totalDay}} 天</p>
+                <p>寄件 {{orderInfo.customerInfo.createrInfo.createSendCount}} 次 | 收件 {{orderInfo.customerInfo.createrInfo.createRecvCount}} 次</p>
+            </li>
+            <li>
+                <p>寄件人：{{orderInfo.customerInfo.senderInfo.fromUser}}</p>
+                <p>电话：<call click="userPorfile" number="orderInfo.customerInfo.senderInfo.fromMobile"></call></p>
+                <p>寄件 {{orderInfo.customerInfo.senderInfo.fromSendCount}} 次|收件 {{orderInfo.customerInfo.senderInfo.fromRecvCount}} 次</p>
+                <p class="clear"></p>
+                <p>寄件地址：{{orderInfo.customerInfo.senderInfo.fromAddr}} {{orderInfo.customerInfo.senderInfo.fromAddrDetail}}</p>
+                <p>取件密码：【{{orderInfo.customerInfo.senderInfo.pickupPassword}}】</p>
+            </li>
+            <li ng-repeat="item in orderInfo.customerInfo.recipients">
+                <p>收件人{{$index+1}}：{{item.toName}}</p>
+                <p>电话：<call click="userPorfile" number="item.toMobile"></call></p>
+                <p>寄件 {{item.sendCount}} 次 | 收件 {{item.recvCount}} 次</p>
+                <p class="clear"></p>
+                <p>状态：{{item.statusName}}</p>
+                <p>寄件地址：{{item.toAddress}}{{item.toAddressDetail}}</p>
+                <p>收件密码：【{{item.deliveryPassword}}】</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading order-detail-heading">
+        <h3 class="panel-title">闪送员信息</h3>
+        <p>
+          <span has-permission="150203" class="btn btn-default btn-xs" ng-click="openTrailPage(data.orderEntity.orderInfo.orderNumber)">轨迹</span>
+          <span has-permission="150200" class="btn btn-default btn-xs" ng-click="openMapPage(data.orderEntity.orderInfo.orderNumber)">地图</span>
+          <span has-permission="150501" class="btn btn-default btn-xs" ng-click="punishment()">处罚</span>
+        </p>
+      </div>
+      <div class="panel-body">
+        <ul class="courier-info-part">
+            <li>姓名：{{orderInfo.courierInfo.courierName}}</li>
+            <li>电话：{{orderInfo.courierInfo.courierMobile}}</li>
+            <li>编号：{{orderInfo.courierInfo.courierNumber}}</li>
+            <li>闪送完成次数：{{orderInfo.courierInfo.courierFinishCount}}次</li>
+            <li>交通工具：{{orderInfo.courierInfo.travelWay}}</li>
+            <li>取件距离：{{orderInfo.courierInfo.grabDistance/1000}} 公里</li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading order-detail-heading">
+        <h3 class="panel-title">订单信息</h3>
+        <p>
+          <span ng-if="orderInfo.orderInfo.status == 20" has-permission="150101" class="btn btn-default btn-xs" ng-click="assigning(data.orderEntity)">指派</span>
+          <span ng-if="orderInfo.orderInfo.status != 60 && orderInfo.orderInfo.status != 64 " has-permission="150103" class="btn btn-default btn-xs" ng-click="dropOrder(data.orderEntity)">流单</span>
+          <span has-permission="150109" class="btn btn-default btn-xs" ng-click="subsidy(data.orderEntity)">补贴</span>
+          <span ng-if="orderInfo.orderInfo.status>20 && orderInfo.orderInfo.status<60" has-permission="150111" class="btn btn-default btn-xs" ng-click="secondPushOrder()" >重推</span>
+          <span ng-if="orderInfo.orderInfo.status == 20" has-permission="150102" class="btn btn-default btn-xs" ng-click="mergeorder()">并单</span>
+          <span has-permission="150100" class="btn btn-default btn-xs" ng-click="sureScore()" ng-if="orderInfo.orderInfo.scoreSwitch==1">确认积分</span>
+          <span has-permission="150100" class="btn btn-default btn-xs" ng-click="changeScore()" ng-if="orderInfo.orderInfo.scoreSwitch==1">调整积分</span>
+        </p>
+      </div>
+      <div class="panel-body">
+        <ul class="order-info-part">
+            <li>订单编号：{{orderInfo.orderInfo.orderNumber}}</li>
+            <li>所在城市：{{orderInfo.orderInfo.cityName}} </li>
+            <li>订单金额：{{orderInfo.orderInfo.totalAmount}}元</li>
+            <li>距离：{{orderInfo.orderInfo.distance/1000}}公里</li>
+            <li>物品重量：{{orderInfo.orderInfo.weight}} 千克</li>
+            <li>指定交通：{{orderInfo.orderInfo.traffic}}</li>
+            <li>下单渠道：{{orderInfo.orderInfo.channel}} </li>
+            <li>物品名称：{{orderInfo.orderInfo.goodsName}} </li>
+            <li>备注：{{orderInfo.orderInfo.remark}}</li>            
+        </ul>
+        <ul class="order-info-time">
+            <li>
+                <p ng-if="orderInfo.orderInfo.priceInfo.mileageAmount.price!=0">
+                    <b>里程金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.mileageAmount.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.mileageAmount.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.continuedWeight.price!=0">
+                    <b>续重金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.continuedWeight.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.continuedWeight.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.preferentialAmount.price!=0">
+                    <b>优惠金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.preferentialAmount.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.preferentialAmount.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.actualPayment.price!=0">
+                    <b>实际支付：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.actualPayment.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.actualPayment.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.nightFee.price!=0">
+                    <b>夜间服务费：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.nightFee.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.nightFee.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.travelWayFee.price!=0">
+                    <b>交通工具费：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.travelWayFee.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.travelWayFee.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.upDoorFee.price!=0">
+                    <b>一取多投上门费：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.upDoorFee.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.upDoorFee.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.premium.price!=0">
+                    <b>溢价金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.premium.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.premium.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.addition.price!=0">
+                    <b>加价金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.addition.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.addition.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.crossRiver.price!=0">
+                    <b>跨江金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.crossRiver.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.crossRiver.remark}}</i>
+                </p>
+                <p ng-if="orderInfo.orderInfo.priceInfo.discountAmount.price!=0">
+                    <b>折扣卡金额：</b>
+                    <span>{{orderInfo.orderInfo.priceInfo.discountAmount.price}}元</span>
+                    <i>{{orderInfo.orderInfo.priceInfo.discountAmount.remark}}</i>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <p>创建：{{orderInfo.timeInfo.createTime}}</p>
+                    <p>抢单：{{orderInfo.timeInfo.grabTime}}</p>
+                    <p>就位：{{orderInfo.timeInfo.inPlaceTime}}</p>
+                    <p>取件：{{orderInfo.timeInfo.pickupTime}}</p>
+                    <p ng-repeat="item in orderInfo.timeInfo.deliveryTime">送件{{$index+1}}：{{item}}</p>
+                    <p ng-if="orderInfo.timeInfo.appointmentTime" class="text-danger">取件预约：{{orderInfo.timeInfo.appointmentTime}}</p>
+                    <p ng-if="orderInfo.timeInfo.appointmentDeliveryTime.length" class="text-danger" ng-repeat="item in orderInfo.timeInfo.appointmentDeliveryTime">送件预约{{$index+1}}：{{item}}</p>
+                </div>
+                <div>
+                    <p>就位：{{orderInfo.timeInfo.inPlaceConsume}}分钟</p>
+                    <p>取件：{{orderInfo.timeInfo.pickupConsume}}分钟</p>
+                    <p>收件：{{orderInfo.timeInfo.timeConsume}}分钟</p>
+                </div>
+                <div>
+                    <p>积分：{{orderInfo.orderInfo.score}}分</p>
+                </div>
+            </li>
+        </ul>
+        <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>时间</th>
+                  <th>操作人</th>
+                  <th>备注</th>
+                  <th>操作类型</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in orderInfo.handlerInfos">
+                  <th scope="row">{{$index + 1}}</th>
+                  <td>{{item.ctime}}</td>
+                  <td>{{item.operator}}</td>
+                  <td>{{item.remark}}</td>
+                  <td>{{item.type}}</td>
+                </tr>
+              </tbody>
+        </table>
+
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading order-detail-heading">
+        <h3 class="panel-title">工单信息</h3>
+        <p>
+            <span has-permission="150303" class="btn btn-default btn-xs" ng-click="createWorkorder(data.orderEntity)">新建工单</span>
+        </p>
+      </div>
+      <div class="panel-body">
+        <table ng-if="workOrderList.length" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>创建时间</th>
+                  <th>工单号</th>
+                  <th>一级</th>
+                  <th>二级</th>
+                  <th>三级</th>
+                  <th>工单状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in workOrderList">
+                  <th scope="row">{{$index + 1}}</th>
+                  <td>{{item.createTime}}</td>
+                  <td>{{item.number}}</td>
+                  <td>{{item.qaQroupName1}}</td>
+                  <td>{{item.qaQroupName2}}</td>
+                  <td>{{item.qaQroupName3}}</td>
+                  <td>{{item.status}}</td>
+                  <td><button has-permission="150300" class="btn btn-success" ng-click="editWorkorder(item)">查看</button></td>
+                </tr>
+              </tbody>
+        </table>
+        <center ng-if="!workOrderList.length">无工单记录</center>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading order-detail-heading">
+        <h3 class="panel-title">投诉信息</h3>
+        <p ng-if="remarkWorkOrderList.length && remarkWorkOrderList[0].isHandle==0">
+            <span has-permission="150500"  class="btn btn-default btn-xs" ng-click="remarkWorkorder()">备注</span>
+            <span has-permission="150501" class="btn btn-default btn-xs" ng-click="punishment()">处罚</span>
+        </p>
+      </div>
+      <div class="panel-body">
+        <table ng-if="remarkWorkOrderList.length" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>创建时间</th>
+                  <th>状态</th>
+                  <th>投诉内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in remarkWorkOrderList">
+                  <th scope="row">{{$index + 1}}</th>
+                  <td>{{item.time}}</td>
+                  <td>{{item.status}}</td>
+                  <td>{{item.content}}</td>
+                </tr>
+              </tbody>
+        </table>
+        <center ng-if="!remarkWorkOrderList.length">无投诉记录</center>
+      </div>
+    </div>
+
+</div>

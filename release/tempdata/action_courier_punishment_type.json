@@ -1,0 +1,20 @@
+{
+   "status": 200 ,
+   "message": "courier punishment data is ok!",
+   "data": [{
+        "number":"W0006",
+        "description":"服务流程不清楚，不能顺利完成服务"
+    },{
+        "number":"W0007",
+        "description":"物品丢失、损坏后及时主动赔偿，且未造成客户投诉"
+    },{
+        "number":"W0008",
+        "description":"不按客户指定交通工具抢单，造成客户投诉"
+    },{
+        "number":"W0009",
+        "description":"抢单后没有及时致电寄件人、收件人"
+    },{
+        "number":"W0012",
+        "description":"服务过程中失联（客服多次联系无果）"
+    }]
+}

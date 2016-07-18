@@ -1,0 +1,101 @@
+{
+  "data": {
+    "currentPage": 0,
+    "marks": null,
+    "result": [
+      {
+        "id": 42,
+        "loginName": "anmeiying",
+        "nickName": "安梅英",
+        "password": "anmeiying330",
+        "ticketName": "8001@shansong",
+        "type": 0,
+        "userId": "0857b9de-e7e7-4ff5-8d67-dc41aeaaaa07"
+      },
+      {
+        "id": 43,
+        "loginName": "sophy",
+        "nickName": "宋弘菲",
+        "password": "jfeng1999",
+        "ticketName": "8300@shansong",
+        "type": 0,
+        "userId": "fc14ccf5-efba-409c-ad30-85cdaf8bd720"
+      },
+      {
+        "id": 44,
+        "loginName": "qian.xu",
+        "nickName": "徐  倩",
+        "password": "123abc",
+        "ticketName": "8400@shansong",
+        "type": 0,
+        "userId": "57d8ba54-dba8-4ad9-977a-eb73435895a3"
+      },
+      {
+        "id": 45,
+        "loginName": "songda",
+        "nickName": "宋  达",
+        "password": "123abc",
+        "ticketName": "8200@shansong",
+        "type": 0,
+        "userId": "432478ce-4498-4cdd-97d0-a6cc76864890"
+      },
+      {
+        "id": 46,
+        "loginName": "ln.kong",
+        "nickName": "孔令娜",
+        "password": "123abc",
+        "ticketName": "8100@shansong",
+        "type": 0,
+        "userId": "35b30d41-ee50-4ad4-8d6b-baaa259ad0c7"
+      },
+      {
+        "id": 47,
+        "loginName": "hanhongzhi",
+        "nickName": "韩宏志",
+        "password": "123abc",
+        "ticketName": "6003@shansong",
+        "type": 1,
+        "userId": "fb503100-c651-4454-8637-2df87305e6ee"
+      },
+      {
+        "id": 49,
+        "loginName": "zhangjingwen",
+        "nickName": "张靖雯",
+        "password": "123abc",
+        "ticketName": "6002@shansong",
+        "type": 1,
+        "userId": "f77b1240-88c6-4f40-adac-79275ce291ff"
+      },
+      {
+        "id": 50,
+        "loginName": "zhangmz",
+        "nickName": "张梦竹",
+        "password": "123abc",
+        "ticketName": "8102@shansong",
+        "type": 2,
+        "userId": "01dc1a6e-69f2-4b30-b0e9-9bbae3e34423"
+      },
+      {
+        "id": 53,
+        "loginName": "jiangyongli",
+        "nickName": "江永丽",
+        "password": "123abc",
+        "ticketName": "8103@shansong",
+        "type": 2,
+        "userId": "099b927d-3ac0-4b21-92a5-bcf77537c326"
+      },
+      {
+        "id": 54,
+        "loginName": "renjingjing",
+        "nickName": "任敬敬",
+        "password": "123abc",
+        "ticketName": "8105@shansong",
+        "type": 2,
+        "userId": "da4845f0-64dd-4a25-82c3-a38e29caed95"
+      }
+    ],
+    "row": 10,
+    "total": 75
+  },
+  "status": 200
+}

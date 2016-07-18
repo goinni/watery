@@ -1,0 +1,49 @@
+<div class="modal-header">
+    <h3 class="modal-title">绑定信息</h3>
+</div>
+<div class="modal-body">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">客服姓名：</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="bindingUser.nickName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">登录账号：</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="bindingUser.loginName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">账号类型：</label>
+        <div class="col-sm-7">
+          <label class="radio-inline">
+            <input type="radio" ng-model="bindingUser.type" id="inlineRadio1" value="0">管理员
+          </label>
+          <label class="radio-inline">
+            <input type="radio" ng-model="bindingUser.type" id="inlineRadio2" value="1">一级员工
+          </label>
+          <label class="radio-inline">
+            <input type="radio" ng-model="bindingUser.type" id="inlineRadio3" value="2">二级员工
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">7*24账号：</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="bindingUser.ticketName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">7*24密码：</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="bindingUser.password">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="submit()">保存</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

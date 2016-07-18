@@ -1,0 +1,25 @@
+<div has-permission="150407" ng-include="'/pages/searchbar/searchbar.html'"></div>
+<div class="container home-page-body">
+  <div class="row all-mark-part">
+      <div ng-controller="TabsParentController">
+            <uib-tabset>
+                <uib-tab select="selectWorkspace(workspace)" ng-repeat="workspace in workspaces" 
+                       active="workspace.active" > 
+                       <uib-tab-heading>
+                            {{workspace.name}}
+                            <span class="glyphicon glyphicon-remove-circle" ng-if="workspace.isRemove" ng-click="rmoveWorkspaceById(workspace.id)"></span>
+                       </uib-tab-heading>
+                       <dynamic-tabcontent tpl="{{workspace.content}}"/>      
+                </uib-tab>
+            </uib-tabset>
+        </div> 
+      
+  </div><!-- all mark part end-->
+</div><!-- home-page-body end-->
+<div class="container footer">
+2015 © 闪送 - 北京同城必应科技有限公司.
+</div>
+<!-- there is init controller, add <font controller> mark !! -->
+<p>
+    <font ng-controller="HomeController"></font>
+</p> 

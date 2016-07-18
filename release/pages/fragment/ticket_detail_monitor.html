@@ -1,0 +1,49 @@
+<div ng-controller="TicketDetailMonitorController">
+<!-- 搜索头 -->
+<ul class="top-search-bar-part">
+	<li>
+		<datepicker-input></datepicker-input>
+	</li>
+	<li>
+	  	<button type="button" ng-click="getData(1)" class="btn btn-default">查询</button>
+	  	<!-- <button type="button" ng-click="search()" class="btn btn-default">导出</button> -->
+	</li>
+</ul>
+<!-- 搜索头 -->
+<!-- 表格内容 -->
+<div>
+<table class="table table-hover">
+<thead>
+	<tr class="btn-primary">
+		<th>工单号</th>
+		<th>订单号</th>
+		<th>一级分类</th>
+		<th>二级分类</th>
+		<th>三级分类</th>
+		<th>提交时间</th>
+		<th>状态</th>
+		<th>处理人</th>
+		<th>备注</th>
+	</tr>
+</thead>
+<tbody>
+	<tr ng-repeat="var in data.page.list">
+		<td>{{var.workOrderNumber}}</td>
+		<td>{{var.orderNumber}}</td>
+		<td>{{var.one}}</td>
+		<td>{{var.two}}</td>
+		<td>{{var.three}}</td>
+		<td>{{var.commitTime}}</td>
+		<td>{{var.status}}</td>
+		<td>{{var.didName}}</td>
+		<td>{{var.remark}}</td>
+	</tr>
+</tbody>
+</table>
+<p ng-if="!data.page.list.length" class="bg-warning">
+    暂无搜索结果
+</p>
+</div>
+<!-- 表格内容 -->
+<uib-pagination items-per-page="data.page.pageSize " total-items="data.page.count" max-size="10" ng-model="data.page.start" ng-change="getData(data.page.start)"></uib-pagination>
+</div>

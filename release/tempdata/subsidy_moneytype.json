@@ -1,0 +1,14 @@
+{
+   "status": 200 ,
+   "message": "subsidy money type list data is ok!",
+   "data": [{
+        "id":"1",
+        "name":"支付宝"
+    },{
+        "id":"2",
+        "name":"银行卡"
+    },{
+        "id":"3",
+        "name":"内部账户"
+    }]
+}

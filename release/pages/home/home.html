@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>闪送-客服管理系统 </title>
+  <link rel="shortcut icon" href="../../common/images/favicon.ico"/>
+  <link rel="bookmark" href="../../common/images/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="../../common/bootstrap/css/bootstrap.min.css?v=1455416932130">
+  <link rel="stylesheet" type="text/css" href="../../common/public.min.css?v=1455416932130">
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=UqXAlMLMSoP4P3XquIiWhzQF" type="text/javascript"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/library/LuShu/1.2/src/LuShu_min.js"></script>
+  <script src="../../common/edb/js/icallcenter/global.js?v=1455416932130"></script>
+  <script src="../../common/edb/hojo/hojo.js?v=1455416932130" djConfig="isDebug:false, parseOnLoad:false"></script>
+  <script src="../../common/core.min.js?v=1455416932130"></script>
+  <script src="../../common/basescript.min.js?v=1455416932130"></script>
+  <script src="../../components/components.min.js?v=1455416932130"></script>
+
+</head>
+<body>
+<div  class="home" ui-view></div>
+<div ng-if="alerts.length" class="alert-box-part" ng-include="'/pages/alert/alert.html'"></div>
+</body>
+</html>

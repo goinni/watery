@@ -1,0 +1,29 @@
+{
+   "status": 200 ,
+   "err": "workorder list data is ok!",
+   "data": [{
+        "id":"1001",
+        "createTime":"2015-01-06 18:31:29 ",
+        "number":"GD000101",
+        "qaQroupName1":"闪送员收件",
+        "qaQroupName2":"完成收件",
+        "qaQroupName3":"无",
+        "status":"完成"
+    },{
+        "id":"1002",
+        "createTime":"2015-01-06 18:31:29 ",
+        "number":"GD000102",
+        "qaQroupName1":"闪送员收件",
+        "qaQroupName2":"完成收件",
+        "qaQroupName3":"无",
+        "status":"完成"
+    },{
+        "id":"1003",
+        "createTime":"2015-01-06 18:31:29 ",
+        "number":"GD000103",
+        "qaQroupName1":"闪送员收件",
+        "qaQroupName2":"完成收件",
+        "qaQroupName3":"无",
+        "status":"完成"
+    }]
+}

@@ -1,0 +1,35 @@
+<div ng-controller="TicketStatisticController">
+<!-- 搜索头 -->
+<ul class="top-search-bar-part">
+	<li>
+		<datepicker-input></datepicker-input>
+	</li>
+	<li>
+	    <select class="form-control" ng-model="selectedType" ng-options="type.id as type.name for type in statisticType">
+	    </select>
+	</li>
+	<li>
+	  	<button type="button" ng-click="getData()" class="btn btn-default">查询</button>
+	  	<!-- <button type="button" ng-click="search()" class="btn btn-default">导出</button> -->
+	</li>
+</ul>
+<!-- 搜索头 -->
+<!-- 表格内容 -->
+<div>
+<table class="table table-hover table-bordered" id="tb">
+<thead>
+	<tr>
+		<th colspan="3" id="timeHead">工单类型</th>
+	</tr>
+	<tr>
+		<th>一级</th>
+		<th>二级</th>
+		<th>三级</th>
+	</tr>
+</thead>
+<tbody id="tbd">
+</tbody>
+</table>
+</div>
+<!-- 表格内容 -->
+</div>

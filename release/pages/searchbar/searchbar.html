@@ -1,0 +1,39 @@
+<ul class="top-search-bar-part" ng-controller="SearchBarController">
+    <li>
+        <datepicker-input></datepicker-input>
+    </li>
+    <li>
+        <select class="form-control" ng-model="param.cityId" ng-options="opt.id as opt.name for opt in list.citys">
+            <option value="">请选择城市</option>
+        </select>
+    </li>
+    <li>
+        <select class="form-control" ng-model="param.userType" ng-options="opt.id as opt.name for opt in list.usertypes">
+            <option value="">全部用户</option>
+        </select>
+    </li>
+    <li>
+        <select class="form-control" ng-model="param.channel" ng-options="opt.id as opt.name for opt in list.channels">
+            <option value="">不限渠道</option>
+        </select>
+    </li>
+    <li>
+        <select class="form-control" ng-model="param.travelWay" ng-options="opt.id as opt.name for opt in list.traffics">
+            <option value="">不限交通</option>
+        </select>
+    </li>
+    <li>
+        <select class="form-control" ng-model="param.key" ng-options="opt.id as opt.name for opt in list.others">
+            <option value="">不限条件</option>
+        </select>
+    </li>
+    <li>
+        <input class="form-control search-field" ng-model="param.searchValue" type="text" placeholder="关键字搜索" maxlength="20">
+    </li>
+    <li>
+        <button type="button" ng-click="search()" ng-disabled="!param.searchValue || !param.key" class="btn btn-default">查询</button>
+    </li>
+    <li>
+        <button type="button" ng-click="reset()" class="btn btn-default">重置</button>
+    </li>
+</ul>

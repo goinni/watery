@@ -1,0 +1,56 @@
+<div class="user-profile" ng-controller="UserProfileController">
+<!-- 发票信息start -->
+<div class="panel panel-primary">
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title">发票信息</h3>
+	</div>
+	<div class="panel-body">
+        <table class="table table-hover">
+              <thead>
+				<tr>
+					<th>发票抬头/内容/金额/投递方式</th>
+					<th>收票人姓名/手机/地址/邮编/备注</th>
+					<th>发票号</th>
+					<th>快递单</th>
+					<th>申请进度</th>
+					<th>申请日期</th>
+				</tr>
+              </thead>
+				<tbody>
+					<tr ng-repeat="var in data">
+						<td>
+							<p>发票抬头：{{var.title}}</p>
+							<p>发票内容：{{var.content}}</p>
+							<p>申请金额：{{var.amount/100}}</p>
+							<p>投递方式：{{var.deliveryWay}}</p>
+						</td>
+						<td>
+							<p>姓名：{{var.name}}</p>
+							<p>手机：{{var.mobile}}</p>
+							<p>地址：{{var.address}}</p>
+							<p>邮编：{{var.postCode}}</p>
+							<p>备注：{{var.remark}}</p>
+						</td>
+						<td>
+							<p>{{var.number}}</p>
+						</td>
+						<td>
+							<p>{{var.expressNumber}}</p>
+						</td>
+						<td>
+							<p>{{var.status}}</p>
+						</td>
+						<td>
+							<p>{{var.ctime}}</p>
+						</td>
+					</tr>
+				</tbody>
+        </table>
+	    <p ng-if="!data.length" class="bg-warning">
+	        暂无搜索结果
+	    </p>
+	</div>
+</div>
+<!-- 发票信息end -->
+
+</div>

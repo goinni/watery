@@ -1,0 +1,38 @@
+{
+   "status": 200 ,
+   "message": "order list data is ok!",
+   "data": {
+    "row":"10",
+    "currentPage": "1",
+    "total":"132",
+    "marks":[
+          {"id":1,"name":"待处理工单","count":360},
+          {"id":2,"name":"处理中工单","count":77},
+          {"id":3,"name":"已结案工单","count":208},
+          {"id":4,"name":"催单工单","count":18}
+    ],
+    "result":[{
+        "id":"1001",
+        "orderNumber":"TDH1010000585271",
+        "createTime":"2015-11-24 10:36:40",
+        "number":"20151124103640000",
+        "qaQroupName1":"发票问题",
+        "qaQroupName2":"修改发票抬头",
+        "qaQroupName3":"",
+        "nickName":"李敏镐",
+        "orderStatus":"已完成",
+        "status":"待处理"
+    },{
+        "id":"1002",
+        "orderNumber":"TDH1010000585223",
+        "createTime":"2015-11-24 10:36:40",
+        "number":"20151124103640000",
+        "qaQroupName1":"投诉闪送员问题",
+        "qaQroupName2":"代收货款未及时归还",
+        "qaQroupName3":"无",
+        "nickName":"李敏镐",
+        "orderStatus":"已完成",
+        "status":"待处理"
+    }]
+   }
+}

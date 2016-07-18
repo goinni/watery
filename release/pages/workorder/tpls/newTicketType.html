@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title">新建工单
+      <!-- <span ng-if="orderNumber">【{{orderNumber}}】</span> -->
+    </h3>
+</div>
+<div class="modal-body new-work-order">
+    <div class="form-horizontal">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label class="radio-inline">
+            <input type="radio" name="type" ng-click="changeType(1)" checked="checked">&nbsp;用户
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="type" ng-click="changeType(0)">&nbsp;闪送员
+          </label>
+        </div>
+      </div>
+
+      <cascade-steps></cascade-steps>
+      
+      <div class="form-group">
+        <div class="col-sm-12">
+          <textarea ng-model="remark" style="width:100%;" rows="6" placeholder="请输入工单备注"></textarea>
+        </div>
+      </div>
+
+    </div>
+</div>
+<div class="modal-footer">
+    <button has-permission="150303" class="btn btn-primary" type="button" ng-click="submit(3)">提交结案</button>
+    <button has-permission="150303" class="btn btn-primary" type="button" ng-click="submit(1)">升级工单</button>
+    <button has-permission="150303" class="btn btn-primary" type="button" ng-click="submit(0)">保存工单</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

@@ -1,0 +1,73 @@
+<div class="my-ticket" ng-controller="MyTicketController">
+
+<div class="top">
+    <button class="btn alert-info" type="button" ng-click="getMyTicket(0)">
+       保存的工单<span class="badge">{{count1}}</span>
+    </button>
+    <button class="btn alert-info" type="button" ng-click="getMyTicket(1)">
+       升级的工单<span class="badge">{{count2}}</span>
+    </button>
+    <button class="btn alert-info" type="button" ng-click="getMyTicket(3)">
+       结案的工单<span class="badge">{{count3}}</span>
+    </button>
+</div>
+
+<div class="mid">
+<table class="table table-hover">
+  <thead>
+    <tr class="btn-primary">
+      <th>#</th>
+      <th>工单号</th>
+      <th>创建时间</th>
+      <th>一级</th>
+      <th>二级</th>
+      <th>三级</th>
+      <th>订单状态</th>
+      <th>订单操作</th>
+      <th>工单状态</th>
+      <th>工单操作</th>
+    </tr>
+  </thead>
+<tbody>
+    <!-- ================LOOP Start=============== -->
+    <tr ng-repeat="ticket in ticketList">
+      <td scope="row">{{$index + 1}}</td>
+      <td>{{ticket.number}}</td>
+      <td>{{ticket.createTime}}</td>
+      <td>
+        {{ticket.qaQroupName1}}
+      </td>
+      <td>
+        {{ticket.qaQroupName2 || '无'}}
+      </td>
+      <td>
+        {{ticket.qaQroupName3 || '无'}}
+      </td>
+      <td>
+        {{ticket.orderStatus}}
+      </td>
+      <td>
+        <button ng-if="order.orderNumber" type="button" class="btn btn-primary btn-xs" ng-controller="EjectController"
+          ng-click="orderDetail(ticket.number)">
+          查看订单
+        </button>
+      </td>
+      <td>
+        {{ticket.status}}
+      </td>
+      <td>  
+        <button type="button" class="btn btn-primary btn-xs" ng-controller="EjectController"
+          ng-click="ticektDetail(ticket.number, ticket.id)">
+          查看工单
+        </button>
+      </td>
+
+    </tr>
+    <!-- ================LOOP End=============== -->
+</tbody>
+</table>
+    <p ng-if="!ticketList.length" class="bg-warning">
+        暂无搜索结果
+    </p>
+</div>
+</div>

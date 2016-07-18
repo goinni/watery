@@ -1,0 +1,35 @@
+{
+    "data": {
+        "order": {
+            "bindingUserVo": null,
+            "courierMobile": "13439531423",
+            "fetchDate": null,
+            "fetchLat": 39.896811,
+            "fetchLng": 116.610771,
+            "fromAddr": "北京",
+            "fromLat": 39.9,
+            "fromLng": 116.6,
+            "grabDate": null,
+            "grabLat": 39.884094,
+            "grabLng": 116.607655,
+            "orderNumber": "TDH2016020110000019",
+            "orderStatus": 64,
+            "readyDate": null,
+            "readyLat": 39.893756,
+            "readyLng": 116.607736,
+            "toAddr": "上地六街数字传媒大厦",
+            "toAddrList": [
+                {
+                    "status": 2,
+                    "toAddr": "上地六街数字传媒大厦",
+                    "toLat": 39.996679,
+                    "toLng": 116.479936
+                }
+            ],
+            "toLat": 40.05,
+            "toLng": 116.31
+        },
+        "title": "轨迹【TDH2016020110000019】"
+    },
+    "status": 200
+}

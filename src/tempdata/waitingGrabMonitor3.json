@@ -1,0 +1,151 @@
+{
+  "data": {
+    "et": "2016-9-9 23:59:59",
+    "res": {
+      "data": {
+        "data": [
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.2",
+            "date": "2015-12-18 00:00:00",
+            "dialout": 6,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7686,
+            "operatorId": "04816139-a9b0-4160-9096-c2dcd8b7cef4",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.2",
+            "date": "2015-12-19 00:00:00",
+            "dialout": 12,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7715,
+            "operatorId": "04816139-a9b0-4160-9096-c2dcd8b7cef4",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.111",
+            "date": "2015-12-20 00:00:00",
+            "dialout": 10,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7732,
+            "operatorId": "04816139-a9b0-4160-9096-c2dcd8b7cef4",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.0",
+            "date": "2015-12-21 00:00:00",
+            "dialout": 3,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7752,
+            "operatorId": "04816139-a9b0-4160-9096-c2dcd8b7cef4",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.5",
+            "date": "2015-12-17 00:00:00",
+            "dialout": 3,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7684,
+            "operatorId": "063ca0d3-c159-4547-b0c8-368ff7799b7d",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.0",
+            "date": "2015-12-18 00:00:00",
+            "dialout": 2,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7700,
+            "operatorId": "063ca0d3-c159-4547-b0c8-368ff7799b7d",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.0",
+            "date": "2015-12-19 00:00:00",
+            "dialout": 2,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7729,
+            "operatorId": "063ca0d3-c159-4547-b0c8-368ff7799b7d",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.0",
+            "date": "2015-12-20 00:00:00",
+            "dialout": 8,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7749,
+            "operatorId": "063ca0d3-c159-4547-b0c8-368ff7799b7d",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "3.0",
+            "date": "2015-12-16 00:00:00",
+            "dialout": 3,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7662,
+            "operatorId": "07aa6606-2ba6-4236-ae88-778c4c489f3e",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          },
+          {
+            "callAmountPerFailOrder": "0",
+            "callAmountPerSuccessOrder": "0",
+            "callAmountPerTotalOrder": "1.0",
+            "date": "2015-12-19 00:00:00",
+            "dialout": 5,
+            "fail": 0,
+            "failAssignRatio": "0.0",
+            "id": 7716,
+            "operatorId": "07aa6606-2ba6-4236-ae88-778c4c489f3e",
+            "success": 0,
+            "successAssignRatio": "0.0"
+          }
+        ],
+        "name": {
+          "04816139-a9b0-4160-9096-c2dcd8b7cef4": "李凤娇",
+          "07aa6606-2ba6-4236-ae88-778c4c489f3e": "韩启"
+        }
+      },
+      "err": null,
+      "status": 200,
+      "success": true
+    },
+    "st": "2015-1-1 00:00:00",
+    "type": 3
+  },
+  "status": 200
+}

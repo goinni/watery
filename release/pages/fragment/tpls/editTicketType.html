@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h3 class="modal-title">新增工单类型</h3>
+</div>
+<div class="modal-body">
+    <ol class="breadcrumb">
+      <li>目录</li>
+      <li>{{typeName}}</li>
+      <li ng-repeat="pace in path">{{pace.name}}</li>
+    </ol>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">类型名称</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="name">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="submit()">保存</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

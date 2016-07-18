@@ -1,0 +1,17 @@
+<div class="panel panel-primary" ng-controller="baiduMap">
+<input type="hidden" id="operator_id"/>
+<input type="hidden" id="order_number"/>
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title">
+			<span>订单：{{data.orderNumber}} &nbsp;&nbsp;闪送员在线情况</span>
+			<span class="label label-default">3小时内【{{online3H}}】</span>
+			<span class="label label-success">20分钟内【{{online20Min}}】</span>
+			<span class="label label-info">闪送中【{{working}}】</span>
+			<span class="label label-warning">不接单【{{unavailable}}】</span>
+			<span class="label label-danger">被冻结【{{forbidden}}】</span>
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div id="map{{data.time}}" style="width:100%;height:600px;"></div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+.top-search-bar-part{
+    width: 100%;
+    min-width: 1300px;
+    padding: 3px 3%;
+    margin:0 auto;
+    position: fixed;
+    height: 40px;
+    top: 50px;
+    left: 0px;
+    z-index: 999;
+    clear: both;
+    border-bottom: 1px solid #f0f0f0;
+    background: rgba(255,255,255,0.97);
+    li{
+        float: left;
+        display: inline;
+        padding-right: 10px;
+    }
+}

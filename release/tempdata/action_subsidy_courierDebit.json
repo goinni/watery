@@ -1,0 +1,20 @@
+{
+   "status": 200 ,
+   "message": "subsidy type list data is ok!",
+   "data": [{
+        "id":"1",
+        "name":"扣款类型1"
+    },{
+        "id":"2",
+        "name":"扣款类型2"
+    },{
+        "id":"3",
+        "name":"扣款类型3"
+    },{
+        "id":"4",
+        "name":"扣款类型4"
+    },{
+        "id":"5",
+        "name":"扣款类型5"
+    }]
+}

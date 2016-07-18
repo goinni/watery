@@ -1,0 +1,90 @@
+<nav class="navbar navbar-inverse no-radius" role="navigation">
+    <div has-permission="150320" class="container call-bar-part" ng-controller="phonebar">
+        <div class="call-timer-tip">{{callTime}}</div>
+        <div class="call-btn-group">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="电话号码" ng-model="tel" ng-init="tel ='';">
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button" ng-click="dialout(tel)">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->
+            <label class="btn btn-danger" ng-click="exit()">
+                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+            </label>
+            <button has-permission="150301" class="btn btn-success add" type="button" ng-click="eject(tel)">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="btn-group">
+            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" ng-click="setBusy(false,'0')" uncheckable>空闲</label>
+            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="setBusy(true, '2')" uncheckable>小休</label>
+            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" ng-click="setBusy(true, '1')" uncheckable>忙碌</label>
+        </div>
+    </div>
+
+    <div class="navbar-header">
+        <div class="dropdown user-login-nav-part">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="glyphicon glyphicon-user"></span>{{SessionUserEntity.user.name}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li role="separator" class="divider"></li>
+                <li ng-controller="loginController"><a ui-sref="login" ng-click="loginOut()">退出登录</a></li>
+                <li role="separator" class="divider"></li>
+              </ul>
+        </div>
+    </div>
+    <ul class="nav navbar-nav nav-bar-menubox" ng-controller="NavbarController">  
+        <!-- 
+        <li>
+            <a ui-sref="index.orderlist">首页</a>
+        </li> 
+        -->
+        <li>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    工单<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li has-permission="150310"><a ng-click="myTicket()" href="#">我的工单</a></li>
+                </ul>
+            </div>
+        </li>
+        <li has-permission="151400">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    数据统计<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li has-permission="150600"><a ng-click="timespanMonitor()" href="#">时段业务量</a></li>
+                    <li has-permission="150600" role="separator" class="divider"></li>
+                    <li has-permission="150601"><a ng-click="ticketDetailMonitor()" href="#">工单明细</a></li>
+                    <li has-permission="150601" role="separator" class="divider"></li>
+                    <li has-permission="150900"><a ng-click="WaitingGrabTicketMonitor()" href="#">品控工单量</a></li>
+                    <li has-permission="150900" role="separator" class="divider"></li>
+                    <li has-permission="150900"><a ng-click="WaitingGrabWorkingMonitor()" href="#">品控工作量</a></li>
+                    <li has-permission="150900" role="separator" class="divider"></li>
+                    <li has-permission="150900"><a ng-click="ticketStatistic()" href="#">工单统计</a></li>
+                </ul>
+            </div>
+        </li>
+        <li has-permission="151401">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    系统设置<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li has-permission="151000"><a ng-click="bindingUser()" href="#">绑定信息</a></li>
+                    <li has-permission="151000" role="separator" class="divider"></li>
+                    <li has-permission="150800"><a ng-click="ticketType()" href="#">工单类型</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    
+
+</nav>
+

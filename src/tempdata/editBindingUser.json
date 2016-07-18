@@ -1,0 +1,14 @@
+{
+  "data": {
+    "bindingUser": {
+      "id": 42,
+      "loginName": "anmeiying",
+      "nickName": "安梅英",
+      "password": "anmeiying330",
+      "ticketName": "8001@shansong",
+      "type": 0,
+      "userId": "0857b9de-e7e7-4ff5-8d67-dc41aeaaaa07"
+    }
+  },
+  "status": 200
+}

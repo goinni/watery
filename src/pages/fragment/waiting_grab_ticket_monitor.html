@@ -1,0 +1,54 @@
+<div ng-controller="WaitingGrabTicketMonitorController">
+<!-- 搜索头 -->
+<ul class="top-search-bar-part">
+	<li>
+		<datepicker-input></datepicker-input>
+	</li>
+	<li>
+	    <select class="form-control" ng-model="data.type" ng-options="user.id as user.name for user in userType">
+	    </select>
+	</li>
+	<li>
+	  	<button type="button" ng-click="getData(1)" class="btn btn-default">查询</button>
+	  	<!-- <button type="button" ng-click="search()" class="btn btn-default">导出</button> -->
+	</li>
+</ul>
+<!-- 搜索头 -->
+<!-- 表格内容 -->
+<div>
+<table class="table table-hover">
+<thead>
+	<tr class="btn-primary">
+		<th width="10%">时间</th>
+		<th>待抢单量</th>
+		<th>指派失败量</th>
+		<th>指派成功量</th>
+		<th>平均每单指派外呼电话量</th>
+		<th>指派失败平均每单外呼电话量</th>
+		<th>指派成功平均每单外呼电话量</th>
+		<th>指派失败率（失败量/待抢单量）</th>
+		<th>指派成功率（成功量/待抢单量）</th>
+	</tr>
+</thead>
+<tbody>
+	<tr ng-repeat="var in data.data.data.data">
+		<td>{{var.date}}</td>
+		<td>{{var.waitingGrab}}</td>
+		<td>{{var.fail}}</td>
+		<td>{{var.success}}</td>
+		<td>{{var.callAmountPerTotalOrder}}</td>
+		<td>{{var.callAmountPerFailOrder}}</td>
+		<td>{{var.callAmountPerSuccessOrder}}</td>
+		<td>{{var.failAssignRatio}}</td>
+		<td>{{var.successAssignRatio}}</td>
+	</tr>
+</tbody>
+
+</table>
+<p ng-if="!data.data.data.data.length" class="bg-warning">
+    暂无搜索结果
+</p>
+</div>
+<!-- 表格内容 -->
+<uib-pagination items-per-page="data.pageSize" total-items="data.data.data.total" max-size="10" ng-model="data.pageNo" ng-change="getData(data.pageNo)"></uib-pagination>
+</div>

@@ -1,0 +1,126 @@
+{
+  "data": {
+    "insertPid": 0,
+    "insertQaType": 0,
+    "insertType": 1,
+    "list": [
+      {
+        "deleteState": 0,
+        "id": 89,
+        "name": "到账与提现问题异常",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 92,
+        "name": "获取密码",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 93,
+        "name": "抢单后不能正常上门",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 94,
+        "name": "闪送员信息变更",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 96,
+        "name": "闪送APP异常",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 97,
+        "name": "咨询奖励与提现规则",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 100,
+        "name": "闪送员主动上报丢失、破损、延迟",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 101,
+        "name": "申请解禁",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 102,
+        "name": "闪送员建议与意见",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 182,
+        "name": "无声电话",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 204,
+        "name": "闪送员报名问题",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 214,
+        "name": "订单问题",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 226,
+        "name": "投诉客服",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      },
+      {
+        "deleteState": 0,
+        "id": 231,
+        "name": "外呼",
+        "pid": 0,
+        "qaType": 0,
+        "type": 1
+      }
+    ],
+    "root": [
+      
+    ],
+    "type": 0
+  },
+  "status": 200
+}

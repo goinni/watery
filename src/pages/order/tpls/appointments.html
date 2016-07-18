@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{modalData.type.name}}</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-3 control-label">订单号码：</label>
+        <div class="col-sm-7">
+          <p class="form-control-static">{{modalData.orderNumber}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+            <label class="col-sm-3 control-label">预约日期：</label>
+            <div class="col-sm-7">
+                <p class="input-group">
+                  <input type="text" class="form-control" uib-datepicker-popup="{{date.format}}" ng-model="date.value" show-weeks="false" on-open-focus="false" is-open="date.opened" min-date="date.min" max-date="date.max" datepicker-options="date.options" ng-required="true" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="opendate($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </p>
+            </div>
+      </div>
+      <div class="form-group">
+            <label class="col-sm-3 control-label">预约时间：</label>
+            <div class="col-sm-7">
+                <uib-timepicker ng-model="time.value" ng-change="changedtime()" hour-step="time.hstep" minute-step="time.mstep" show-meridian="time.ismeridian"></uib-timepicker>
+            </div>
+      </div>
+      <div class="form-group container-fluid">
+        <textarea class="form-control" ng-model="remark" rows="3" placeholder="填写预约原因及并选择预约时间"></textarea>
+      </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="isDisabled" type="button" ng-click="ok()">确定</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

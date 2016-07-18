@@ -1,0 +1,73 @@
+.trail-map-context{
+    margin-top: 10px;
+    .panel-body{
+        padding: 0px;
+    }
+}
+.my-ticket {
+    .top {
+        margin-top:10px;
+    }
+    .mid {
+        margin-top:10px;
+    }
+}
+.order-list-body{
+    margin-top: 10px;
+}
+.eject {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 10px;
+    .coustom-info-heading{
+        height: 38px;
+        overflow: hidden;
+        padding: 10px 15px 0;
+
+        h3,p{
+            width: 20%;
+            height: auto;
+            float: left;
+            display: block;
+        }
+    }
+    .coustom-info-part{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        clear: both;
+        li{
+            float: left;
+            height: auto;
+            overflow: hidden;
+            border-right: 1px dashed #999;
+            &:last-child{
+                border-right:none;
+            };
+
+            p{
+                padding: 0 10px;
+                font-size: 12px;
+                &.clear{
+                    height: 10px;
+                    line-height: 1px;
+                    overflow: hidden;
+                    width: 100%;
+                    clear: both;
+                    font-size: 1px;
+                }
+            }
+        }
+    }
+    .div-four{
+        li{
+            width: 24.5%;
+        }
+    }
+    .div-five{
+        li{
+            width: 19.7%;
+        }
+    }
+}

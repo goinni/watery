@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Loading</title>
+<style type="text/css">
+body {
+    background: #161616 !important;
+    margin: 0;
+    padding: 0;
+    font: 12px normal Verdana, Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+* {margin: 0; padding: 0; outline: none;}
+
+/* Full Width Progress Bar */
+
+#content { 
+    width:80%; 
+    height:15px; 
+    overflow: hidden;
+    margin:0px auto; 
+    background:#000;
+}
+.loading-tip{
+    margin-top: 180px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    color: #6B6969;
+}
+.fullwidth .expand { 
+    width:80%; 
+    height:10px; 
+    border-radius: 5px;
+    margin:2px 0; 
+    background:#2187e7; 
+    overflow: hidden;
+    position:absolute;
+    box-shadow:0px 0px 10px 1px rgba(0,198,255,0.7);
+    -moz-animation:fullexpand 3s ease-out;
+    -webkit-animation:fullexpand 3s ease-out;
+}
+
+@-moz-keyframes fullexpand {
+    0%  { width:0px;}
+    80%{ width:80%;}  
+}
+@-webkit-keyframes fullexpand {
+    0%  { width:0px;}
+    80%{ width:80%;}  
+}
+
+</style>
+<link rel="shortcut icon" href="/common/images/favicon.ico"/>
+<link rel="bookmark" href="/common/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/common/bootstrap/css/bootstrap.min.css?v=1455416932130">
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=UqXAlMLMSoP4P3XquIiWhzQF" type="text/javascript"></script>
+  <script src="/common/edb/js/icallcenter/global.js?v=1455416932130"></script>
+  <script src="/common/edb/hojo/hojo.js?v=1455416932130" djConfig="isDebug:false, parseOnLoad:false"></script>
+  <script src="/common/core.min.js?v=1455416932130"></script>
+<script>        
+function loadImage(url, callback) {
+    var img = new Image(); //创建一个Image对象，实现图片的预下载 
+    img.src = url; 
+    if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数 
+        callback.call(img); 
+        return; // 直接返回，不用再处理onload事件 
+    }
+    img.onload = function () { //图片下载完毕时异步调用callback函数。 
+        callback.call(img);//将回调函数的this替换为Image对象 
+    }; 
+}; 
+
+$(document).ready(function() {
+    $('#content').removeClass('fullwidth');     
+    $('#content').removeClass('fullwidth').delay(10).queue(function(next){
+        $(this).addClass('fullwidth');
+        next();
+    });
+    loadImage('/common/images/login_bg.jpg',function(){
+        setTimeout(function(){
+            pageout();
+        },2700);
+    })
+});
+function pageout(){
+    $('body').fadeOut(function(){
+        window.location.href="/pages/home/home.html#/login";
+        $(this).fadeIn(function(){$(this).fadeOut()});
+    });
+    
+}
+
+</script>
+</head>
+<body>
+<!-- FULL WIDTH -->
+<div class="loading-tip">正在初始化...</div>
+<div id="content">
+<span class="expand"></span>
+</div>
+<!-- END FULL WIDTH -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+   "status": 200 ,
+   "err": "courier list data is ok!",
+   "data": {
+        "courierInfo":{
+            "courierName":"陈宇超",
+            "courierMobile":"13023681197",
+            "courierUid":"SSHZ00300640",
+            "cityName":"杭州市",
+            "travelWay":"摩托车",
+            "imei":"867469025781096",
+            "appVersion":"5.8.8",
+            "utime":"2015-05-02 15:07:58",
+            "status":"正常",
+            "courierFinishCount":"1168"
+        },
+        "accountInfo":{
+            "courierName":"陈宇超",
+            "city":"杭州市",
+            "bankName":"招商银行（杭州分行高新支行）",
+            "bankBranch":"",
+            "bankCard":"6214********7716",
+            "balance":"709.5",
+            "status":"正常"
+        },
+        "punishmentRecord":[{
+            "time":"2015-10-22 12:30",
+            "type":"不干活",
+            "timeNumber":"1",
+            "dateNumber":"7",
+            "orderNumber":"DDH00101000",
+            "employee":"李宇春"
+        },{
+            "time":"2015-10-22 12:30",
+            "type":"不干活2",
+            "timeNumber":"1",
+            "dateNumber":"7",
+            "orderNumber":"DDH00101000",
+            "employee":"李宇春"
+        }],
+        "pullBlackRecord":[{
+            "ctime":"2016-01-20 10:10",
+            "employee":"金志文",
+            "orderNumber":"DDH00101000"
+        },{
+            "ctime":"2016-01-20 10:10",
+            "employee":"金志文2",
+            "orderNumber":"DDH00101000"
+        }],
+        "grabOrderInfo":[{
+            "time":"2016-01-13 14:03:03.147",
+            "orderNumber":"DH10571124333894",
+            "status":"成功",
+            "distance":"1.8"
+        },{
+            "time":"2016-01-13 14:03:03.147",
+            "orderNumber":"DH10571124333894",
+            "status":"成功2",
+            "distance":"1.8"
+        },{
+            "time":"2016-01-13 14:03:03.147",
+            "orderNumber":"DH10571124333894",
+            "status":"成功3",
+            "distance":"1.8"
+        }],
+        "receivePushInfo":[{
+            "time":"2016-01-13 09:51:31.913",
+            "orderNumber":"DH10571124110351",
+            "distance":"10"
+        },{
+            "time":"2016-01-13 09:51:31.913",
+            "orderNumber":"DH10571124110351",
+            "distance":"10"
+        },{
+            "time":"2016-01-13 09:51:31.913",
+            "orderNumber":"DH10571124110351",
+            "distance":"10"
+        }]
+   }
+}

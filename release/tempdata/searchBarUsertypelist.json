@@ -1,0 +1,11 @@
+{
+   "status": 200 ,
+   "message": "user type list data is ok!",
+   "data": [{
+        "id":1,
+        "name":"新用户"
+    },{
+        "id":2,
+        "name":"老用户"
+    }]
+}

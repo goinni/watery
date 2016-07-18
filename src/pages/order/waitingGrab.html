@@ -1,0 +1,57 @@
+<div class="waitingGrab" ng-controller="WaitingGrabController">
+	<div class="top">
+		<div>
+			<button has-permission="150402" class="btn btn-default btn-danger" ng-click="fetch()">领单</button>
+			<button has-permission="150403" class="btn btn-default btn-success" ng-click="refresh()">刷新</button>
+		</div>
+	</div>
+	<div class="mid">
+		<table class="table table-hover table-bordered">
+			<thead>
+			<tr>
+				<th>订单编号</th>
+				<th>寄件信息</th>
+				<th>寄件地址和收件地址</th>
+				<th>操作信息</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr ng-repeat="var in list">
+				<td>
+					<p><a ng-click="orderDetail(var.orderNumber)">{{var.orderNumber}}</a></p>
+					<p>{{var.ctime}}</p>
+				</td>
+				<td>
+					<p>
+						￥{{var.total}}&nbsp;&nbsp;|&nbsp;&nbsp;
+						{{var.distance/1000}}公里&nbsp;&nbsp;|&nbsp;&nbsp;
+						{{var.weight}}千克&nbsp;&nbsp;|&nbsp;&nbsp;
+						物品：{{var.goods}}
+					</p>
+					<p ng-if="var.remark">备注：{{var.remark}}</p>
+					<span class="red">
+					<p>取件预约时间：{{var.pickupAppointTime}}</p>
+					</span>
+					<span class="label label-primary">{{var.travelWay}}</span>
+				</td>
+				<td>
+					<div class="from">
+					寄：{{var.fromAddress}}
+					</div>
+					<div class="to" ng-repeat="addr in var.toAddress">
+					收{{$index+1}}：{{addr}}
+					</div>
+				</td>
+				<td>
+					<p>外呼量：{{var.courierCount}}</p>
+					<div class="map">
+                        <button has-permission="150200" class="btn btn-default btn-success" 
+						ng-click="openMapPage(var.orderNumber)">查看地图</button>
+                    </div>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,63 @@
+{
+  "data": {
+    "ticketQaGroups": [
+      {
+        "deleteState": 0,
+        "id": 29,
+        "name": "修改预约时间",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 30,
+        "name": "修改地址",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 31,
+        "name": "取消订单",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 32,
+        "name": "并单",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 33,
+        "name": "定位不准确，运费收取有误",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 34,
+        "name": "重推订单",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      },
+      {
+        "deleteState": 0,
+        "id": 35,
+        "name": "修改收件人电话",
+        "pid": 4,
+        "qaType": 1,
+        "type": 2
+      }
+    ]
+  },
+  "status": 200
+}

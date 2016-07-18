@@ -1,0 +1,37 @@
+{
+    "err": "获取闪送员订单信息成功",
+    "status": 200,
+    "data":[
+        {
+            "orderId": "1001",
+            "fromAddress": "上地六街数字传媒大厦",
+            "fromMobile": "13439531423",
+            "fromName": "张洁",
+            "orderNumber": "TDH2016012610000529",
+            "toAddress": [
+                "上地六街数字传媒大厦"
+            ],
+            "toMobiles": [
+                "13439531423"
+            ],
+            "toNames": [
+                "赛音"
+            ]
+        },{
+            "orderId": "1002",
+            "fromAddress": "上地六街数字传媒大厦2",
+            "fromMobile": "23439531423",
+            "fromName": "张洁2",
+            "orderNumber": "TDH2016012610000529",
+            "toAddress": [
+                "上地六街数字传媒大厦2"
+            ],
+            "toMobiles": [
+                "13439531423"
+            ],
+            "toNames": [
+                "赛音2"
+            ]
+        }
+    ]
+}

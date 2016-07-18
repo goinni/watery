@@ -1,0 +1,263 @@
+<div class="eject" ng-controller="EjectController">
+
+<!-- 用户信息start -->
+<div class="panel panel-primary">
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title">用户信息</h3>
+		<button has-permission="150303" type="button" style="position:relative;top:-8px;" class="pull-right btn btn-success" 
+			ng-click="newWorkOrder()">
+			新建工单
+		</button>
+	</div>
+	<div class="panel-body">
+	<work-order-cascade></work-order-cascade>
+	<ul class="coustom-info-part div-four">
+	    <li>
+			<p>
+				客户姓名：
+				<span ng-switch on="saveFlag">
+					<span ng-switch-when="0">{{userInfo.name}}</span>
+					<span ng-switch-when="1">
+						<input type="text" ng-model="userInfo.name"/>
+					</span>
+				</span>
+			</p>
+			<p>
+				账户类型：
+		        <span ng-switch="userInfo.subType">
+				    <span ng-switch-when="1">
+				        个人用户
+				    </span>
+				    <span ng-switch-when="2">
+				        商户
+				    </span>
+				    <span ng-switch-when="3">
+				        企业用户
+				    </span>
+				    <span ng-switch-when="4">
+				        企业子用户
+				    </span>
+				</span>
+			</p>
+	    </li>
+	    <li>
+			<p>
+				所在城市：
+				<span ng-switch on="saveFlag">
+					<span ng-switch-when="0">{{userInfo.city}}</span>
+					<span ng-switch-when="1">
+						<input type="text" ng-model="userInfo.city"/>
+					</span>
+				</span>
+				<dialout>1235456</dialout>
+			</p>
+			<p>
+	           账号状态：
+		        <span ng-switch="userInfo.type">
+				    <span ng-switch-when="0">
+				        正常
+				    </span>
+				    <span ng-switch-when="1">
+				        冻结
+				    </span>
+				    <span ng-switch-when="2">
+				        过期
+				    </span>
+				</span>
+			</p>
+	    </li>
+	    <li>
+	        <p>寄件次数：{{userInfo.fromCount}}</p>
+	        <p>账户余额：{{userInfo.cash || 0}}</p>
+	    </li>
+	    <li>
+	        <p>收件次数：{{userInfo.toCount}}</p>
+			<span ng-switch on="saveFlag">
+				<span ng-switch-when="1">
+	        		<p><button class="btn btn-success btn-xs" type="button" ng-click="saveUser()">保存</button></p>
+				</span>
+			</span>
+
+	    </li>
+	</ul>
+	</div>
+</div>
+<!-- 用户信息end -->
+
+<!-- 闪送员信息start -->
+<div class="panel panel-primary">
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title">闪送员信息</h3>
+	</div>
+	<div class="panel-body">
+	<ul class="coustom-info-part div-five">
+	    <li>
+			<p>
+				闪送员姓名：{{courierInfo.name}}
+			</p>
+			<p>
+				闪送次数：{{courierInfo.courierWorkCount}}
+			</p>
+	    </li>
+	    <li>
+			<p>
+				闪送员编号：{{courierInfo.number}}
+			</p>
+			<p>
+	           奖励次数：{{courierInfo.rewardsCount}}
+			</p>
+	    </li>
+	    <li>
+	        <p>
+	        	所在城市：{{courierInfo.city}}
+	        </p>
+	        <p>
+	        	处罚次数：{{courierInfo.punishCount}}
+	        </p>
+	    </li>
+	    <li>
+	        <p>
+	        	入职时间：{{courierInfo.ctime}}
+	        </p>
+	        <p>
+	        	拉黑次数：{{courierInfo.blackCount}}
+	        </p>
+	    </li>
+	    <li>
+	        <p>
+		        账户状态：
+		        <span ng-switch="courierInfo.status">
+				    <span ng-switch-when="0">
+				        正常
+				    </span>
+				    <span ng-switch-when="1">
+				        冻结
+				    </span>
+				    <span ng-switch-when="2">
+				        过期
+				    </span>
+				</span>
+	        </p>
+	        <p>
+	        	账户余额：{{courierInfo.cash}}
+	        </p>
+	    </li>
+	</ul>
+	</div>
+</div>
+<!-- 闪送员信息end -->
+
+<!-- 订单列表start -->
+<div class="panel panel-primary">
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title ">最近订单列表</h3>
+	</div>
+	<div class="panel-body">
+        <table class="table table-hover">
+              <thead>
+				<tr>
+					<th>下单时间</th>
+					<th>订单号</th>
+					<th>寄件人</th>
+					<th>收件人</th>
+					<th>支付信息</th>
+					<th>订单状态</th>
+					<th>订单操作</th>
+					<th>已建工单</th>
+					<th>工单操作</th>
+				</tr>
+              </thead>
+				<tbody>
+					<tr ng-repeat="order in orderList">
+						<td>{{order.ctime}}</td>
+						<td>{{order.orderNumber}}</td>
+						<td>
+							{{order.fromName}}
+						</td>
+						<td>
+							<p ng-repeat="name in order.toName">{{name}}&nbsp;</p>
+						</td>
+						<td>支付方式：{{order.paymentInfo.type}}&nbsp;|&nbsp;支付渠道：{{order.paymentInfo.agent}}<br>
+							总计：{{order.paymentInfo.total}}元&nbsp;|&nbsp;余额：{{order.paymentInfo.balance}}元&nbsp;|&nbsp;优惠：{{order.paymentInfo.discount}}元
+						</td>
+						<td>{{order.statusName}}</td>
+						<td>
+							<button has-permission="150401" ng-if="order.orderNumber" type="button" class="btn btn-success btn-sm" 
+								ng-click="orderDetail(order.orderNumber)">
+								查看订单
+							</button>
+						</td>
+						<td>
+							{{order.ticketCount}}
+						</td>
+						<td>
+							<button has-permission="150303" type="button" class="btn btn-success btn-sm" 
+								ng-click="newWorkOrder(order.orderNumber)">
+								新建
+							</button>
+						</td>
+					</tr>
+				</tbody>
+        </table>
+	</div>
+</div>
+<!-- 订单列表end -->
+
+<!-- 工单列表start -->
+<div class="panel panel-primary">
+	<div class="panel-heading coustom-info-heading">
+		<h3 class="panel-title ">最近工单列表</h3>
+	</div>
+	<div class="panel-body">
+        <table class="table table-hover">
+			<thead>
+				<tr>
+					<th>创建时间</th>
+					<th>工单号</th>
+					<th>一级</th>
+					<th>二级</th>
+					<th>三级</th>
+					<th>订单状态</th>
+					<th>订单操作</th>
+					<th>工单状态</th>
+					<th>工单操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="ticket in ticketList">
+					<td>{{ticket.createTime}}</td>
+					<td>{{ticket.number}}</td>
+					<td>
+						{{ticket.qaQroupName1}}
+					</td>
+					<td>
+						{{ticket.qaQroupName2}}
+					</td>
+					<td>
+						{{ticket.qaQroupName3}}
+					</td>
+					<td>
+						{{ticket.orderStatus}}
+					</td>
+					<td>
+						<button has-permission="150401" ng-if="ticket.orderNumber" type="button" class="btn btn-success btn-sm" 
+							ng-click="orderDetail(ticket.orderNumber)">
+							查看订单
+						</button>
+					</td>
+					<td>
+						{{ticket.status}}
+					</td>
+					<td>	
+						<button has-permission="150300" type="button" class="btn btn-success btn-sm" 
+							ng-click="ticektDetail(ticket.number, ticket.id)">
+							查看工单
+						</button>
+					</td>
+				</tr>
+			</tbody>
+        </table>
+	</div>
+</div>
+<!-- 工单列表end -->
+</div>

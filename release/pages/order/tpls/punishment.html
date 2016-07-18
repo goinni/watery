@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h3 class="modal-title">闪送员处罚</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+       <div class="form-group">
+            <label class="col-sm-3 control-label">订单号码：</label>
+            <div class="col-sm-7">
+              <p class="form-control-static">{{modalData.orderInfo.orderNumber}}</p>
+            </div>
+       </div>
+       <div class="form-group">
+            <label class="col-sm-3 control-label">处罚类型：</label>
+            <div class="col-sm-9">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" ng-click="loadPunishType(1)" ng-model="param.punishType" value="1"> 警告
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" ng-click="loadPunishType(2)" ng-model="param.punishType" value="2"> 处罚
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" ng-click="loadPunishType(3)" ng-model="param.punishType" value="3"> 禁闭
+                </label>
+            </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">处罚原因：</label>
+        <div class="col-sm-5">
+            <select class="form-control ng-pristine ng-valid ng-touched" ng-model="param.number" ng-options="opt.number as opt.description for opt in list.numberlist">
+                <option value="">请选择</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group container-fluid">
+        <textarea class="form-control" ng-model="param.remark" rows="3" placeholder="请输入处罚备注"></textarea>
+      </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">确定</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+</div>

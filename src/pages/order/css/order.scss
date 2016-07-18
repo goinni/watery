@@ -1,0 +1,270 @@
+.order-list-table-part{
+    margin-top: 10px;
+}
+.order-list-body{
+    span.label.label-primary{
+        margin-right: 5px;
+    }
+    .show-courier-info-btn{
+        cursor: pointer;
+        &:hover{
+            color:#337ab7;
+        };
+    }
+    .recipient-marks-area{
+        height:26px;
+    }
+}
+.order-detail-panel{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 10px;
+    .panel.panel-primary{
+        .panel-heading p span{
+            border: none !important;
+        }
+    }
+    .order-detail-heading{
+        height: 38px;
+        overflow: hidden;
+        padding: 10px 15px 0;
+        h3{
+            padding-right: 20px;
+        }
+        h3,p{
+            display: inline;
+        }
+    }
+    .coustom-info-heading{
+        height: 38px;
+        overflow: hidden;
+        padding: 10px 15px 0;
+
+        h3,p{
+            width: 20%;
+            height: auto;
+            float: left;
+            display: block;
+        }
+    }
+    .coustom-info-part{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        clear: both;
+        li{
+            float: left;
+            width: 19.7%;
+            height: 140px;
+            overflow: hidden;
+            border-right: 1px dashed #999;
+            &:last-child{
+                border-right:none;
+            };
+
+            p{
+                padding: 0 10px;
+                font-size: 12px;
+                &.clear{
+                    height: 10px;
+                    line-height: 1px;
+                    overflow: hidden;
+                    width: 100%;
+                    clear: both;
+                    font-size: 1px;
+                }
+                .glyphicon-earphone{
+                    padding: 0 10px !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .courier-info-part{
+        li{
+            float: left;
+            padding: 0 10px;
+        }
+    }
+    .order-info-part{
+        width: 100%;
+        height: auto;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #999;
+        li{
+            float: left;
+            padding: 0 10px;
+        }
+    }
+    .order-info-time{
+        width: 100%;
+        height: auto;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #999;
+        li{
+            width: 100%;
+            float: left;
+            &:nth-child(1){
+                width:340px;
+
+                p{
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    b{
+                        display: block;
+                        float: left;
+                        font-weight: normal;
+                        min-width: 120px;
+                    }
+                    span{
+                        width: 50px;
+                        display: block;
+                        float: left;
+                        text-align: right;
+                    }
+                    i{
+                        display: block;
+                        float: left;
+                        font-style: normal;
+                        color: #999;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            &:nth-child(2){
+                width:60%;
+                border-left: 1px dashed #999;
+                div{
+                    float: left;
+                    height: auto;
+                    overflow: hidden;
+                    &:nth-child(1){
+                        width:40%;
+                        p{
+                            text-indent: 10px;
+                        }
+                    }
+                    &:nth-child(2){
+                        width:30%;
+                    }
+                    &:nth-child(3){
+                        width:30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.waitingGrab {
+    padding:20px 0px;
+    margin: 0 auto;
+    .top {
+        div {
+            margin-left:40px;
+            height:40px;
+            line-height:40px;
+            color:#0e6190;
+            font-size:12px;
+            button {
+                width:120px;
+                margin-left:15px;
+            }
+        }
+    }
+    .mid {
+        margin-top:20px;
+        table {
+            text-align: center;
+            thead {
+                tr th {
+                    text-align: center;
+                }
+                color:#888;
+            }
+            tbody {
+                tr td {
+                    text-align:left;
+                    padding:5px 5px 5px 15px;
+                    .map {
+                        white-spacing:nowrap;
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px;
+                        button {
+                            width:150px;
+                        }
+                    }
+                    .from {
+                        width:100%;
+                        margin:0 auto;
+                        border-bottom:1px dashed #aaa;
+                        padding:10px 0px 10px 0px;
+                    }
+                    .to {
+                        margin-top:5px;
+                        width:100%;
+                    }
+                    &:nth-child(4){
+                        text-align:center;
+                    }
+                }
+            }
+            font-size:12px;
+        }
+    }
+}
+
+.cancel {
+    padding:20px 0px;
+    margin: 0 auto;
+    .top {
+        div {
+            margin-left:40px;
+            height:40px;
+            line-height:40px;
+            color:#0e6190;
+            font-size:12px;
+            button {
+                width:120px;
+                margin-left:15px;
+            }
+        }
+    }
+    .mid {
+        margin-top:20px;
+        table {
+            text-align: center;
+            thead {
+                tr th {
+                    text-align: center;
+                }
+                color:#888;
+            }
+            tbody {
+                tr td {
+                    text-align:left;
+                    padding:5px 5px 5px 15px;
+                    .map {
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px;
+                        button {
+                            width:100px;
+                        }
+                    }
+                    &:nth-child(4){
+                        text-align:center;
+                    }
+                }
+            }
+            font-size:12px;
+        }
+    }
+}

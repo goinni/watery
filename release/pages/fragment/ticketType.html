@@ -1,0 +1,40 @@
+<div ng-controller="TicketTypeController">
+<!-- 表格内容 -->
+<div>
+
+<ol class="breadcrumb">
+
+	<li><a href="#" ng-click="backToRoot()">目录</a></li>
+	<li><a href="#" ng-click="getData(type, 0)">{{typeName}}</a></li>
+	<li ng-repeat="pace in path">
+		<a href="#" ng-click="getData(pace.qaType, pace.id)">{{pace.name}}</a>.
+	</li>
+	<li ng-if="-1 != type">
+		<button type="button" class="btn btn-success btn-xs" ng-click="add()">新增</button>
+	</li>
+</ol>
+<table class="table table-hover table-condensed">
+<thead>
+	<tr class="btn-primary">
+		<th>#</th>
+		<th>问题描述</th>
+		<th>操作</th>
+	</tr>
+</thead>
+<tbody>
+	<tr ng-repeat="var in list">
+		<td scope="row">{{$index + 1}}</td>
+		<td>{{var.name}}</td>
+		<td>
+			<button type="button" class="btn btn-primary btn-xs" ng-click="getData(var.type, var.id)" ng-if="3 != var.type">下一级</button>
+			<button type="button" class="btn btn-danger btn-xs" ng-click="del(var.id)" ng-if="-1 != type">删除</button>
+		</td>
+	</tr>
+</tbody>
+</table>
+<p ng-if="!list.length" class="bg-warning">
+    暂无记录
+</p>
+</div>
+<!-- 表格内容 -->
+</div>

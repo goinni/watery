@@ -1,0 +1,156 @@
+{
+   "status": 200 ,
+   "message": "order list data is ok!",
+   "data": {
+    "row":"10",
+    "currentPage": "1",
+    "total":"132",
+    "marks":[
+        {"id":0,"name":"所有订单","count":1020},
+        {"id":1,"name":"待抢单","count":230},
+        {"id":2,"name":"取件超时","count":12},
+        {"id":4,"name":"送件超时","count":36},
+        {"id":3,"name":"取消单投诉","count":13},
+        {"id":6,"name":"积分调整","count":57},
+        {"id":7,"name":"取送严重超时","count":16},
+        {"id":8,"name":"新闪送员接单","count":39},
+        {"id":9,"name":"新城市待抢单","count":90}
+    ],
+    "result":[{
+        "orderInfo":{
+            "pickupPassword":"22787",
+            "orderNumber": "TDH1010000585271",
+            "creator": "18510239278",
+            "city": "北京市",
+            "ctime": "2015-12-30 09:35:23",
+            "premium": "27.00",
+            "addition": "10.00",
+            "marks":["app","夜间单"]
+        },
+        "senderInfo":{
+            "city":"北京",
+            "name": "陈阔",
+            "fromMobile": "15501213579",
+            "fromAddr": "北京市海淀区财经东路",
+            "marks":["公共交通"]
+        },
+        "recipientsInfo":[{
+            "toName": "刘德华",
+            "toMobile": "18510238723",
+            "toAddr": "北京市昌平区地铁13号线龙泽地铁站",
+            "firstOpen":true,
+            "marks":["已完成"]
+        },{
+            "toName": "周立波",
+            "toMobile": "13510010238",
+            "toAddr": "北京市海淀区地铁13号线五道口地铁站",
+            "marks":["已完成"]
+        }],
+        "paymentInfo":{
+            "type": "在线支付",
+            "agent": "闪送账户",
+            "total": "36.00",
+            "balance": "30.00",
+            "discount": "6元"
+        },
+        "courierInfo":{
+            "courierId":"2001",
+            "name": "吴奇隆",
+            "mobile": "15502382937",
+            "number": "SSBJ00800179",
+            "marks":["电动车"]
+        },
+        "orderStatus": "已完成"
+    },{
+        "orderInfo":{
+            "pickupPassword":"22787",
+            "orderNumber": "TDH1010000585271",
+            "creator": "18510239278",
+            "city": "北京市",
+            "ctime": "2015-12-30 09:35:23",
+            "premium": "27.00",
+            "addition": "0",
+            "marks":["app","夜间单"]
+        },
+        "senderInfo":{
+            "city":"北京",
+            "name": "陈阔",
+            "fromMobile": "15501213579",
+            "fromAddr": "北京市海淀区财经东路",
+            "marks":["公共交通"]
+        },
+        "recipientsInfo":[{
+            "toName": "刘德华",
+            "toMobile": "18510238723",
+            "toAddr": "北京市昌平区地铁13号线龙泽地铁站",
+            "firstOpen":true,
+            "marks":["已完成"]
+        },{
+            "toName": "周立波",
+            "toMobile": "13510010238",
+            "toAddr": "北京市海淀区地铁13号线五道口地铁站",
+            "marks":["已完成"]
+        }],
+        "paymentInfo":{
+            "type": "在线支付",
+            "agent": "闪送账户",
+            "total": "36.00",
+            "balance": "30.00",
+            "discount": "6元"
+        },
+        "courierInfo":{
+            "courierId":"2001",
+            "name": "吴奇隆",
+            "mobile": "15502382937",
+            "number": "SSBJ00800179",
+            "marks":["电动车"]
+        },
+        "orderStatus": "已完成"
+    },{
+        "orderInfo":{
+            "pickupPassword":"22787",
+            "orderNumber": "TDH1010000585271",
+            "creator": "18510239278",
+            "city": "北京市",
+            "ctime": "2015-12-30 09:35:23",
+            "premium": "27.00",
+            "addition": "10.00",
+            "marks":["app","夜间单"]
+        },
+        "senderInfo":{
+            "city":"北京",
+            "name": "陈阔",
+            "fromMobile": "15501213579",
+            "fromAddr": "北京市海淀区财经东路",
+            "marks":["公共交通"]
+        },
+        "recipientsInfo":[{
+            "toName": "刘德华",
+            "toMobile": "18510238723",
+            "toAddr": "北京市昌平区地铁13号线龙泽地铁站",
+            "firstOpen":true,
+            "marks":["已完成"]
+        },{
+            "toName": "周立波",
+            "toMobile": "13510010238",
+            "toAddr": "北京市海淀区地铁13号线五道口地铁站",
+            "marks":["已完成"]
+        }],
+        "paymentInfo":{
+            "type": "在线支付",
+            "agent": "闪送账户",
+            "total": "36.00",
+            "balance": "30.00",
+            "discount": "6元"
+        },
+        "courierInfo":{
+            "courierId":"2001",
+            "name": "吴奇隆",
+            "mobile": "15502382937",
+            "number": "SSBJ00800179",
+            "marks":["电动车"]
+        },
+        "orderStatus": "已完成"
+    }]
+   }
+}

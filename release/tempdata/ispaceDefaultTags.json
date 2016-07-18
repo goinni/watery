@@ -1,0 +1,41 @@
+{
+    "status":200,
+    "err": "handler center",
+    "data":[
+              {
+                "id": 1,
+                "name": "订单中心",
+                "active": true,
+                "isRemove": false,
+                "content": "tpls/mark.html",
+                "data": {
+                    "marks":[
+                        {"name":"所有订单","count":1000,"url":"index.orderlist({type:3,id:12})"},
+                        {"name":"待抢单","count":230},
+                        {"name":"取件超时","count":12},
+                        {"name":"送件超时","count":36},
+                        {"name":"取消单投诉","count":13},
+                        {"name":"积分调整","count":57},
+                        {"name":"取送严重超时","count":16},
+                        {"name":"新货接单","count":39}
+                    ]
+                }
+              },{
+                  "id": 2,
+                  "name": "工单中心",
+                  "active": false,
+                  "isRemove": false,
+                  "content": "tpls/mark.html",
+                  "data": {
+                      "marks":[
+                          {"id":21,"name":"待处理工单","count":360,"url":"index.workOrderlist({type:1,id:23})"},
+                          {"id":22,"name":"处理中工单","count":77},
+                          {"id":23,"name":"已结案工单","count":208},
+                          {"id":24,"name":"催单工单","count":18}
+                      ]
+                  }
+              }
+        ]
+}
+
+

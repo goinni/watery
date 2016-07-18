@@ -1,0 +1,69 @@
+{
+  "operatorId":"123",
+  "data": {
+    "bindingUserVo": {
+      "id": 123,
+      "loginName": "wangxuhao",
+      "nickName": "wangxuhao",
+      "password": "wangxuhao",
+      "ticketName": "wangxuhao",
+      "type": 0,
+      "userId": "uuid"
+    },
+    "carrierMapDto": {
+      "carrierList": [
+        {
+          "atWork": true,
+          "distance": 1,
+          "latestLocationRecordDate": "2016-01-13 17:45:30",
+          "latitude": 40.163657,
+          "loginName": "15501213579",
+          "longitude": 116.26,
+          "name": "陈阔",
+          "status": "06",
+          "travelWay": 1
+        },
+        {
+          "atWork": false,
+          "distance": 1,
+          "latestLocationRecordDate": "2016-01-13 10:33:29",
+          "latitude": 40.163773,
+          "loginName": "18610441107",
+          "longitude": 116.272683,
+          "name": "",
+          "status": "06",
+          "travelWay": 4
+        }
+      ],
+      "forbidden": 0,
+      "online20Min": 0,
+      "online3H": 2,
+      "unavailable": 0,
+      "working": 1
+    },
+    "order": {
+      "bindingUserVo": null,
+      "courierMobile": null,
+      "fetchDate": null,
+      "fetchLat": 0,
+      "fetchLng": 0,
+      "fromAddr": "昌平区高教园中街",
+      "fromLat": 40.16,
+      "fromLng": 116.27,
+      "grabDate": null,
+      "grabLat": 0,
+      "grabLng": 0,
+      "orderNumber": "TDH2016011310000055",
+      "orderStatus": 15,
+      "readyDate": null,
+      "readyLat": 0,
+      "readyLng": 0,
+      "toAddr": null,
+      "toAddrList": null,
+      "toLat": 0,
+      "toLng": 0
+    },
+    "title": "地图【TDH2016011310000055】"
+  },
+  "status": 200
+}

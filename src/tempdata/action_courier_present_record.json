@@ -1,0 +1,29 @@
+{
+    "data": {
+        "currentPage": 1,
+        "result": [
+            {
+                "ctime": "2015-12-11 14:27:43",
+                "remark": "申请提现",
+                "seqNum": "TX001001",
+                "amount": "1000",
+                "status": "提交申请"
+            },{
+                "ctime": "2015-12-12 14:27:43",
+                "remark": "申请提现",
+                "seqNum": "TX001002",
+                "amount": "2000",
+                "status": "提交申请"
+            },{
+                "ctime": "2015-12-13 14:27:43",
+                "remark": "申请提现",
+                "seqNum": "TX001003",
+                "amount": "3000",
+                "status": "提交申请"
+            }
+        ],
+        "row": 10,
+        "total": 1
+    },
+    "status": 200
+}

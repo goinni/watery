@@ -1,0 +1,14 @@
+{
+   "status": 200 ,
+   "message": "subsidy usertype list data is ok!",
+   "data": [{
+        "id":"1",
+        "name":"闪送员补贴"
+    },{
+        "id":"2",
+        "name":"客户补款"
+    },{
+        "id":"3",
+        "name":"闪送员扣款"
+    }]
+}

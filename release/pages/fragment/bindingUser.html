@@ -1,0 +1,51 @@
+<div ng-controller="BindingUserController">
+<!-- 导航栏 -->
+<ul class="top-search-bar-part">
+    <li>
+        <input ng-model="searchStr" type="text" class="form-control" placeholder="关键字搜索"/>
+    </li>
+    <li>
+        <button type="button" ng-click="search()" class="btn btn-default">查询</button>
+    </li>
+    <li>
+        <button type="button" ng-click="reset()" class="btn btn-default">重置</button>
+    </li>
+    <li>
+        <button type="button" class="btn btn-success" ng-click="edit(-1)">新增</button>
+    </li>
+</ul>
+<!-- 导航栏 -->
+<!-- 表格内容 -->
+<div>
+<table class="table table-hover">
+<thead>
+	<tr class="btn-primary">
+		<th>#</th>
+		<th>客服姓名</th>
+		<th>后台账号</th>
+		<th>7*24账号</th>
+		<th>7*24密码</th>
+		<th>操作</th>
+	</tr>
+</thead>
+<tbody>
+	<tr ng-repeat="user in data.result">
+		<td scope="row">{{$index + 1}}</td>
+		<td>{{user.nickName}}</td>
+		<td>{{user.loginName}}</td>
+		<td>{{user.ticketName}}</td>
+		<td>{{user.password}}</td>
+		<td>
+			<button type="button" class="btn btn-primary btn-xs" ng-click="edit(user.id)">编辑</button>
+			<button type="button" class="btn btn-danger btn-xs" ng-click="del(user.id)">删除</button>
+		</td>
+	</tr>
+</tbody>
+</table>
+    <p ng-if="!data.result.length" class="bg-warning">
+        暂无搜索结果
+    </p>
+<uib-pagination items-per-page="data.row" total-items="data.total" ng-model="data.currentPage" ng-change="paging()"></uib-pagination>
+</div>
+<!-- 表格内容 -->
+</div>
